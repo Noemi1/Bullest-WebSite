@@ -1,14 +1,16 @@
 @import 'fonts.css';
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all .2s ease;
 }
 *:not(input):focus {
   outline: none;
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-size: 1.6rem;

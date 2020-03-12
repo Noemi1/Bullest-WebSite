@@ -52,7 +52,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/fontawesome/js/all.js"
+              "src/assets/fontawesome/js/all.js",
+              "../node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {

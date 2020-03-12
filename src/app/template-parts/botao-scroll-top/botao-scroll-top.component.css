@@ -3,6 +3,17 @@
   bottom: 0;
   right: 0;
 }
+.content-scroll-top.hidden {
+  bottom: -60vh;
+  transition: 1s;
+  opacity: 0;
+}
+
+.content-scroll-top.visible {
+  bottom: 0;
+  transition: 1s;
+  opacity: 1;
+}
 
 .btn-scrollTop {
   display: block;

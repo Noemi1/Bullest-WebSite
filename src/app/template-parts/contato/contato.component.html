@@ -1,20 +1,58 @@
 <section class="contato">
   <div class="contato__faleConosco">
     <h3>Fale Conosco</h3>
-    <p>Frase de Efeito</p>
-    <form method="POST">
-      <label for="nome">Nome: <span>*</span></label>
-      <input type="text" name="nome" id="nome" placeholder="Ex: Angela Maria da Silva" required>
+    <p>Você sonha, nós realizamos</p>
+    <form method="POST" class="contato__faleConosco-form" #form="ngForm">
+      <p>
+        <label for="nome">Nome: <span class="campo-obrigatorio">*</span></label>
+        <input type="text" name="nome" id="nome" placeholder="Ex: Angela Maria da Silva"
+          required
+          title="Nome..."
+          class="contato__campo-input"
+          #nome="ngModel"
+          ngModel>
+      </p>
 
-      <label for="email">Email: <span>*</span></label>
-      <input type="email" name="telefone" id="telefone" placeholder="Telefone" required>
+      <p>
+        <label for="email">Email: <span class="campo-obrigatorio">*</span></label>
+        <input type="email" name="email" id="telefone" placeholder="abcdef@exemplo.com"
+          required
+          title="Email..."
+          class="contato__campo-input"
+          #email="ngModel"
+          ngModel>
+      </p>
 
-      <label for="telefone">Telefone: <span>*</span></label>
-      <input type="text" name="telefone" id="telefone" placeholder="Ex: (11) 95346-3376" required>
+      <p>
+        <label for="telefone">Telefone: <span class="campo-obrigatorio">*</span></label>
+        <input type="text" name="telefone" id="telefone" placeholder="Ex: (11) 95346-3376"
+          required
+          title="Telefone..."
+          class="contato__campo-input"
+          #telefone="ngModel"
+          ngModel>
+      </p>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem aqui..."></textarea>
+      <p>
+        <label for="mensagem">Mensagem: <span class="campo-obrigatorio">*</span></label>
+        <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem aqui..."
+          required
+          title="Mensagem..."
+          class="contato__campo-input contato__campo-input--textarea"
+          #mensagem="ngModel"
+          ngModel></textarea>
+      </p>
+      <div class="contato__faleConosco--footer">
+        <span *ngIf="form.invalid && form.touched">Existem um ou mais campos obrigatórios !!</span>
+        <button type="submit" class="btn-enviarMensagem"
+          [class.disabled]="form.invalid"
+          title="Enviar Mensaegm">Enviar</button>
+      </div>
     </form>
   </div>
-  <div class="contato__comoChegar"></div>
+  <div class="contato__comoChegar">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1052147801156!2d-46.65582238502217!3d-23.56466438468128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7d3a04d29%3A0xd7035ad82107a00d!2sAv.%20Paulista%2C%201159%20-%20Jardim%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003103-003!5e0!3m2!1spt-BR!2sbr!4v1584029194495!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+      class="img-mapa" ></iframe>
+
+  </div>
 </section>
