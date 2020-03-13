@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
   }
   toggleMenu(): boolean {
     this.classeActive = !this.classeActive;
-    console.log(this.classeActive);
     return this.classeActive;
   }
 
@@ -30,10 +29,15 @@ export class HeaderComponent implements OnInit {
       } else {
         this.headerFixo = false;
       }
-      console.log($(window).scrollTop());
-      console.log(this.headerFixo);
       return this.headerFixo;
     });
-
+  }
+  scrollToSection(section: string) {
+    if ($(section).offset() !== undefined) {
+      const header = $('.header').hasClass('fixed') ? 70 : 140;
+      $('html, body').animate({
+        scrollTop: $(section).offset().top - header
+      }, '300');
+    }
   }
 }

@@ -1,0 +1,56 @@
+.content-scroll-down {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto 6vh;
+  width: 100%;
+}
+
+.btn-scrollDown {
+  margin: auto;
+  display: block;
+  border: none;
+  font-size: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: #000000;
+  transition: 1s;
+  animation: linear BotaoScrollDown 3s infinite;
+}
+
+.btn-scrollDown:hover {
+  transition: 2s;
+  animation: none;
+  transform: scale(1.1);
+}
+
+@keyframes BotaoScrollDown {
+  0% {
+    transform: translateY(0%);
+  }
+
+  10% {
+    transform: translateY(10%);
+  }
+
+  25% {
+    transform: translateY(25%);
+  }
+
+  50% {
+    transform: translateY(50%);
+
+  }
+
+  75% {
+    transform: translateY(25%);
+
+  }
+
+  90% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

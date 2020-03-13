@@ -86,9 +86,9 @@
   border-radius: 4px;
   border: transparent;
   background: linear-gradient(120deg,
-      rgba(51, 49, 50, 1) 0%,
-      rgba(51, 49, 50, 1) 50%,
-      rgb(49, 150, 53) 50%);
+            #0a0a0a 0%,
+            #0a0a0a 50%,
+            #319635 50%);
   background-size: 220%;
   color: #fff;
   font-size: 1.8rem;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
+
 @Component({
   selector: 'app-botao-scroll-top',
   templateUrl: './botao-scroll-top.component.html',

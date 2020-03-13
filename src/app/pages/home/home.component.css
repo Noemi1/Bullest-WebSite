@@ -1,3 +1,4 @@
-.banner {
+.home__banner {
+  position: relative;
   height: calc(100vh - 70px);
 }

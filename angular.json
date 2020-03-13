@@ -46,6 +46,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",
               "src/assets/fontawesome/css/all.css",
               "src/assets/fontawesome/css/all.min.css",
               "src/assets/fontawesome/css/solid.css",
@@ -53,7 +54,7 @@
             ],
             "scripts": [
               "src/assets/fontawesome/js/all.js",
-              "../node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {

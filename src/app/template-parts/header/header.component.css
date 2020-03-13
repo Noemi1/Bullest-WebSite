@@ -1,14 +1,15 @@
 .header {
+  height: 75px;
   background-color: #1f486b;
-  height: 90px;
+  background-color: #2b2a2a;
+  box-shadow: 4px 4px 4px 0px #a5a4a4;
   z-index: 5;
   transition: .3s;
-  box-shadow: 4px 4px 4px 0px #a5a4a4;
 }
 .header.static {
   position: static;
   width: 97%;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
 }
 
 .header.fixed {

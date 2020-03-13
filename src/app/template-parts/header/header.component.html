@@ -2,14 +2,14 @@
     <div class="wrapper">
       <nav class="header__navigation" [class.active]="this.classeActive">
         <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
-          <a [routerLink]="" class="logo-link"></a>
+          <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
         </div>
         <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
         <div class="navigation__links" [class.menuOpen]="this.classeActive">
-          <a  class="header__navigation-link">Serviços</a>
-          <a [routerLink]="" class="header__navigation-link">Cases</a>
-          <a [routerLink]="" class="header__navigation-link">Sobre Nós</a>
-          <a [routerLink]="" class="header__navigation-link">Contato</a>
+          <a (click)="scrollToSection('#servicos')"  class="header__navigation-link">Serviços</a>
+          <a (click)="scrollToSection('#cases')"  class="header__navigation-link">Cases</a>
+          <a (click)="scrollToSection('#sobreNos')"  class="header__navigation-link">Sobre Nós</a>
+          <a (click)="scrollToSection('#contato')"  class="header__navigation-link">Contato</a>
         </div>
       </nav>
     </div>

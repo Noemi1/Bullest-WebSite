@@ -1,4 +1,4 @@
-<section class="contato">
+<section class="contato" id="contato">
   <div class="contato__faleConosco">
     <h3>Fale Conosco</h3>
     <p>Você sonha, nós realizamos</p>
@@ -46,6 +46,7 @@
         <span *ngIf="form.invalid && form.touched">Existem um ou mais campos obrigatórios !!</span>
         <button type="submit" class="btn-enviarMensagem"
           [class.disabled]="form.invalid"
+          (click)="enviarEmail(form)"
           title="Enviar Mensaegm">Enviar</button>
       </div>
     </form>
