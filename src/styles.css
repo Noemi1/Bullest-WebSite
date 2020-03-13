@@ -1,4 +1,5 @@
-@import 'fonts.css';
+@import 'assets/css-aditional/fonts.css';
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -7,6 +8,9 @@
 }
 *:not(input):focus {
   outline: none;
+}
+*:active {
+  background: none;
 }
 html {
   font-size: 62.5%;

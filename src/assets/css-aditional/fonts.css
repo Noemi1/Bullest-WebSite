@@ -1,0 +1,42 @@
+@font-face {
+  font-family: WonderThin;
+  src: url(../fonts/WonderUnitSans-Thin.woff)
+}
+@font-face {
+  font-family: WonderRegular;
+  src: url(../fonts/WonderUnitSans-Regular.woff)
+}
+@font-face {
+  font-family: WonderBold;
+  src: url(../fonts/WonderUnitSans-Bold.woff)
+}
+
+@font-face {
+  font-family: WonderExtraBold;
+  src: url(../fonts/WonderUnitSans-Extrabold.woff)
+}
+
+@font-face {
+  font-family: WonderBlack;
+  src: url(../fonts/WonderUnitSans-Black.woff)
+}
+
+@font-face {
+  font-family: WonderRegularItalic;
+  src: url(../fonts/WonderUnitSans-RegularItalic.woff)
+}
+
+@font-face {
+  font-family: WonderBoldItalic;
+  src: url(../fonts/WonderUnitSans-BoldItalic.woff)
+}
+
+@font-face {
+  font-family: WonderBlackItalic;
+  src: url(../fonts/WonderUnitSans-BlackItalic.woff)
+}
+
+@font-face {
+  font-family: WonderMedium;
+  src: url(../fonts/WonderUnitSans-Medium.woff)
+}

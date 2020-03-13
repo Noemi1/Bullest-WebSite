@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 import { EnviarEmailService } from './../../services/enviar-email.service';
 
@@ -20,17 +20,20 @@ export class ContatoComponent implements OnInit {
   ngOnInit() {
   }
 
-  enviarEmail(form) {
-    // this.serviceEmail.postEmail(form.value)
-    // .subscribe(
-    //   res => {
-    //     console.log(res);
-    //     this.toastr.success('Sucesso', 'Cadastrado com Sucesso!!');
-    //   }, err => {
-    //     console.log(err);
-    //     this.toastr.error('Deu erro', 'Sem Sucesso!!');
-    //   });
-    // console.log(form.value);
+  enviarEmail(form: NgForm) {
+    this.serviceEmail.postEmail(form.value)
+    .subscribe(
+      res => {
+        console.log(res);
+        this.toastr.success('Sucesso', 'Cadastrado com Sucesso!!');
+      }, err => {
+        console.log(err);
+        this.toastr.error(
+          `Poxa, que pena que isso aconteceu!! Você ainda pode entrar em contato
+           conosco pelo whatsapp ou pelo email`,
+          `Erro`);
+      });
+    console.log(form.value);
   }
 
 }

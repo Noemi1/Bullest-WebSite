@@ -1,10 +1,15 @@
-<header class="header" [class.fixed]="this.headerFixo" [class.static]="!this.headerFixo">
+<header class="header" [class.fixed]="this.headerFixo" [class.relative]="!this.headerFixo">
     <div class="wrapper">
       <nav class="header__navigation" [class.active]="this.classeActive">
         <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
           <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
         </div>
-        <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
+        <div class="header--mobile">
+          <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
+            <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
+          </div>
+          <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
+        </div>
         <div class="navigation__links" [class.menuOpen]="this.classeActive">
           <a (click)="scrollToSection('#servicos')"  class="header__navigation-link">Serviços</a>
           <a (click)="scrollToSection('#cases')"  class="header__navigation-link">Cases</a>

@@ -14,7 +14,7 @@
   cursor: pointer;
   color: #000000;
   transition: 1s;
-  animation: linear BotaoScrollDown 3s infinite;
+  animation: linear BotaoScrollDown 2s infinite;
 }
 
 .btn-scrollDown:hover {
@@ -33,16 +33,16 @@
   }
 
   25% {
-    transform: translateY(25%);
+    transform: translateY(20%);
   }
 
   50% {
-    transform: translateY(50%);
+    transform: translateY(30%);
 
   }
 
   75% {
-    transform: translateY(25%);
+    transform: translateY(20%);
 
   }
 

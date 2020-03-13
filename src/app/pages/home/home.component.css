@@ -1,4 +1,22 @@
 .home__banner {
   position: relative;
   height: calc(100vh - 70px);
+  background-color: #235279;
+  width: 97%;
+  margin: 0 auto 0;
+  box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: .3s margin .1s;
+}
+.home__banner.full{
+  width: 100%;
+  margin: 10px 0 0;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .home__banner{
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
 }

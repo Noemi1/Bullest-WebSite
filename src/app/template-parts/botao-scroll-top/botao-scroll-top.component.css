@@ -27,10 +27,11 @@
   background-color: #ca5d00;
   font-size: 2rem;
   cursor: pointer;
-  transition: .5s;
+  transition: .3s;
 }
 
 .btn-scrollTop:hover {
-  width: 45px;
-  height: 45px;
+  width: 43px;
+  height: 43px;
+  background-color: #f7780b;
 }

@@ -56,13 +56,14 @@
 }
 
 .footer__navigation-link:hover {
-  background-color: #235279;
+  background-color: #11304a;
   font-family: WonderMedium;
 }
 
-.footer__info-contato p {
+.footer__info-contato p, .footer__info-contato span {
   color: #fff;
   margin: 10px 0;
+  display: block;
 }
 
 .footer__info-contato p:hover {
