@@ -16,6 +16,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 import { ToastrModule } from 'ngx-toastr';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [ AppComponent,  ]

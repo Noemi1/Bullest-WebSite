@@ -3,19 +3,163 @@
     <app-botao-scroll-down></app-botao-scroll-down>
   </div>
 </section>
-<section class="cases">
+<section class="cases" id="cases">
   <div class="wrapper">
     <div class="cases__inner">
       <h3>Conheça nosso trabalho</h3>
       <div class="cases__slick">
-        <article class="cases__slick-item">oi</article>
-        <article class="cases__slick-item">oie</article>
-        <article class="cases__slick-item">ooie</article>
-        <article class="cases__slick-item">oiie</article>
-        <article class="cases__slick-item">oiiee</article>
-        <article class="cases__slick-item">ooiiee</article>
+        <button class="slick-arrow slick-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slick-arrow slick-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="slick-content">
+          <div class="cases__slick-item" #santander>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/santander.jpeg);"></div>
+            <div class="logo-title">
+              <h3>Banco Santander</h3>
+              <p>Compliance e Monitoramentos</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(santander)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>O Banco Santander Brasil S.A. é a subsidiária do banco espanhol Santander.</p>
+              <p>A BulleST já desenvolveu mais de 60 sistemas de controle e monitoramento para
+                as mais diversas áreas da empresa. Entre elas destacam-se Compliance,
+                Jurídico, Corporate, Risco Socioambiental e Asset.</p>
+              <p>A parceria entre a BulleST e o Banco Santander já tem mais de 6 anos,
+                e cada dia mais é fortalecida com o desenvolvimento de soluções flexíveis,
+                escaláveis e otimizáveis para diversas equipes administrativas.</p>
+            </div>
+          </div>
+          <div class="cases__slick-item" #bid>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/bid.png);"></div>
+            <div class="logo-title">
+              <h3>BID</h3>
+              <p>Banco de Estilos</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(bid)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>O Banco Interamericano de desenvolvimento é a principal fonte de financiamento multilateral
+                da América Latina. A BulleST desenvolveu o software Manual de Estilos, que promoveu a
+                otimização de internacionalização de contratos e campanhas publicitárias, através de dicionário
+                atualizável português-francês-inglês-espanhol.</p>
+            </div>
+          </div>
+          <div class="cases__slick-item" #govsp>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/governosp.png);"></div>
+            <div class="logo-title">
+              <h3>Governo de São Paulo</h3>
+              <p>Banco Central da Cultura</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(govsp)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>A BulleST desenvolveu para a Secretaria da Cultura do Governo do Estado de São Paulo uma solução
+                Web para cadastro, contratação e repositório de eventos culturais e artistas. O projeto denominado
+                Banco Central de Cultura transformou significativamente a forma de gerenciamento de artistas e
+                eventos promovidos pela Secretaria.</p>
+            </div>
+
+          </div>
+          <div class="cases__slick-item" #staff>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/staff.png);"></div>
+            <div class="logo-title">
+              <h3>Staff</h3>
+              <p>Gestão de ISS</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(staff)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>A Staff é uma empresa especializada em regulamentação fiscal e cadastral perante órgãos
+                públicos e autarquias em todo o território nacional. Entre as soluções desenvolvidas pela
+                BulleST, destaca-se a ferramenta de Gestão de ISS, que permite o controle, registro e atualização
+                de informações sobre tributos e obrigações acessórias de milhares de prefeituras de todo o país.</p>
+            </div>
+          </div>
+          <div class="cases__slick-item" #citibank>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/citibank.jpg);"></div>
+            <div class="logo-title">
+              <h3>Citibank</h3>
+              <p>Pesquisa PLD automatizada</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(citibank)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>O Citibank é a divisão de consumo da multinacional de serviços financeiros Citigroup. A BulleST
+                atuou na área de Prevenção a Lavagem de Dinheiro, com o desenvolvimento de ferramenta que
+                automatiza a investigação de clientes em ferramentas de buscas de informações e notícias relacionadas.
+              </p>
+            </div>
+          </div>
+          <div class="cases__slick-item" #mmd2>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/mmd2.png);"></div>
+            <div class="logo-title">
+              <h3>MMD2</h3>
+              <p>Aplicativos de gestão de RH</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(mmd2)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>A MMD2 é uma empresa especializada em Soluções nas áreas de recursos humanos, tanto no âmbito
+                privado quanto público. A BulleST desenvolveu aplicativos para gestão de demandas de seus clientes,
+                entre elas controle de afastamentos de funcionários, controle de férias e controle de timesheet.</p>
+            </div>
+
+          </div>
+          <div class="cases__slick-item" #cavc>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/cavcidiomas.png);"></div>
+            <div class="logo-title">
+              <h3>CAVC Idiomas</h3>
+              <p>Sistema corporativo</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(cavc)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>A rede CAVC idiomas é uma rede de escolas para especialização em línguas estrangeiras,
+                entre elas inglês, alemão, espanhol, francês e italiano. Através de um sistema corporativo,
+                foi possível a otimização de seus processos comerciais e administrativos com desenvolvimento
+                de portais de matrículas online, portal de alunos, gestão pedagógica, financeira e administrativa.</p>
+            </div>
+          </div>
+          <div class="cases__slick-item" #s3>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/santanderS3.jpg);"></div>
+            <div class="logo-title">
+              <h3>Santander Securities Services</h3>
+              <p>Controles de compliance</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(s3)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>Frutos de uma parceria global no exterior entre o Banco Santander S.A. e um grupo liderado
+                pelo Warburg Pincus, a Santander Securities Services presta serviços de custódia qualificada
+                para o mercado. A BulleST foi a grande responsável pelo estabelecimento de controles de
+                Compliance na instituição, entre eles PLD, Aceitação de clientes, Monitoramento de operações
+                e Atendimento a Órgãos Reguladores.</p>
+            </div>
+          </div>
+          <div class="cases__slick-item" #fastshop>
+            <div class="logo-img" style="background-image: url(../../../../../assets/img/fastshop.png);"></div>
+            <div class="logo-title">
+              <h3>Fast Shop</h3>
+              <p>Solução para gerenciamento DIRF</p>
+            </div>
+            <button class="ver-mais" (click)="verMais(fastshop)">Ver Mais</button>
+            <div class="modal-conteudo">
+              <p>A Fast Shop é uma rede de lojas brasileira de comercialização de eletrodomésticos e
+                eletroeletrônicos de luxo. Fundada em 1986, a empresa possui 96 lojas em 7 estados
+                brasileiros. A BulleST foi parceira para desenvolvimento de uma solução para
+                gerenciamento e envio de obrigações fiscais da empresa para a Receita Federal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="slick__footer"></div>
       </div>
     </div>
   </div>
 </section>
+<div class="modal" [class.active]="this.modalOpen">
+  <div class="modal-bg" (click)="fecharModal()"></div>
+  <div class="modal-inner">
+    <button class="fecharModal" (click)="fecharModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-content">
+    </div>
+
+  </div>
+</div>
+
 <app-contato></app-contato>

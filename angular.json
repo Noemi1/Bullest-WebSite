@@ -46,12 +46,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/fontawesome/css/all.css",
               "src/assets/slick/slick.css",
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/fontawesome/js/all.js",
               "src/assets/slick/slick.js"

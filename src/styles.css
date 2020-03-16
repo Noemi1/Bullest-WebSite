@@ -1,38 +1,87 @@
 @import 'assets/css-aditional/fonts.css';
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: all .2s ease;
 }
+
 *:not(input):focus {
   outline: none;
 }
+
 *:active {
   background: none;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 body {
   font-size: 1.6rem;
   font-family: WonderRegular;
 }
+
 img {
   max-width: 100%;
+  border: 0;
+  vertical-align: middle;
 }
+
 a {
   text-decoration: none;
   color: #000;
   cursor: pointer;
 }
+
+button {
+  cursor: pointer;
+}
+
+
 .wrapper {
   margin: 0 auto;
   width: 85%;
   max-width: 1150px;
 }
+
 .main {
   min-height: calc(100vh - 70px - 230px);
+}
+
+.modal {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  opacity: 0;
+  transition: cubic-bezier(0.65, 0.05, 0.36, 1) .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  top: 0;
+  opacity: 1;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+body.modalOpen {
+  overflow: hidden;
 }

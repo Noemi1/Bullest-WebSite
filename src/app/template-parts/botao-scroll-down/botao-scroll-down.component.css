@@ -11,7 +11,6 @@
   border: none;
   font-size: 5rem;
   background-color: transparent;
-  cursor: pointer;
   color: #000000;
   transition: 1s;
   animation: linear BotaoScrollDown 2s infinite;
