@@ -1,0 +1,14 @@
+.servicos {
+  background: linear-gradient(180deg, #fff 50%, #e9e8e8);
+  padding: 10vh 0;
+}
+.servicos-bg {
+  background-image: linear-gradient(to right bottom,
+    rgb(93, 139, 177),
+    rgb(8, 84, 146),
+    rgb(18, 49, 76),
+    rgb(7, 23, 37));
+  height: calc(100vh - 100px);
+  transform: skewY(4deg);
+  background-attachment: fixed;
+}

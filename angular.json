@@ -46,7 +46,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/fontawesome/css/all.css",

@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   bannerFull = false;
 
-  modalOpen = false;
 
   constructor() {
   }
@@ -29,14 +28,6 @@ export class HomeComponent implements OnInit {
       }
       return this.bannerFull;
     });
-  }
-  verMais(conteudo) {
-    this.modalOpen = true;
-    return this.modalOpen;
-  }
-  fecharModal() {
-    this.modalOpen = false;
-    $('body').removeClass('modalOpen')
   }
 
 }

@@ -1,8 +1,9 @@
 .content-scroll-down {
-  position: absolute;
-  bottom: 0;
-  margin: 0 auto 6vh;
-  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: calc(100vh - 190px);
 }
 
 .btn-scrollDown {
@@ -11,7 +12,7 @@
   border: none;
   font-size: 5rem;
   background-color: transparent;
-  color: #000000;
+  color: #fbfbfbc4;
   transition: 1s;
   animation: linear BotaoScrollDown 2s infinite;
 }

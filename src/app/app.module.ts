@@ -17,6 +17,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 import { ToastrModule } from 'ngx-toastr';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CasesComponent } from './template-parts/cases/cases.component';
+import { CasesDetalhesComponent } from './template-parts/cases-detalhes/cases-detalhes.component';
+import { ServicosComponent } from './template-parts/servicos/servicos.component';
 
 @NgModule({
   declarations: [
@@ -28,16 +31,19 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HomeComponent,
     NotFoundComponent,
     BotaoScrollDownComponent,
+    CasesComponent,
+    CasesDetalhesComponent,
+    ServicosComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-    HttpClientModule,
-    ToastrModule.forRoot(),
+    BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
     SlickCarouselModule,
   ],
   providers: [],
