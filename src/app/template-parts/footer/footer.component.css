@@ -110,12 +110,12 @@ span.icon-span.email {
 
 .copiright {
   width: 100%;
-  text-align: center;
-  color: #fff;
-  /* background-color: #0f2130ad; */
-  border-top: 2px #0f2130ad solid;
   padding: 8px 0;
   margin: 30px 0 0;
+  text-align: center;
+  /* background-color: #0f2130ad; */
+  /* border-top: 2px #0f2130ad solid; */
+  color: #fff;
   font-size: 1.3rem;
   font-family: WonderThin;
 }
