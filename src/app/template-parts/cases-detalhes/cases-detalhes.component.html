@@ -1,12 +1,9 @@
 <section class="cases-detalhes">
   <div class="modal">
     <div class="modal-bg" (click)="fecharModal()"></div>
-    <div class="modal-inner">
+    <div class="modal-inner" [class.modalOpen]="this.modalOpen">
       <button class="fecharModal" (click)="fecharModal()"><i class="fas fa-times"></i></button>
       <div class="modal-content">
-        <!-- <div class="modal-image">
-          <img src="{{ this.case.Imagem }}" alt="">
-        </div> -->
         <h3 class="title-modal" *ngIf="this.case.Empresa !== null" >
           {{ this.case.Empresa }}
         </h3>
@@ -16,7 +13,6 @@
         <div class="servico-prestado">
           {{ this.case.Servico }}
         </div>
-
       </div>
     </div>
   </div>

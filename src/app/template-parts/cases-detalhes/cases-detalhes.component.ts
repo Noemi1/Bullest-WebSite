@@ -13,22 +13,29 @@ export class CasesDetalhesComponent implements OnInit {
 
   case: CaseModel;
   cases = cases as CaseModel[];
-  idRota = (this.activatedRoute.snapshot.paramMap.get('Id') as unknown) as number
+  modalOpen = false;
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit() {
     console.log(localStorage.getItem('conteudo'))
     this.case = JSON.parse(localStorage.getItem('conteudo'));
+
+    $('body').addClass('modalOpen')
+    setTimeout(() => {
+      this.modalOpen = true;
+    }, 500)
   }
   fecharModal() {
-    this.case = ('' as unknown) as CaseModel;
-    localStorage.removeItem('conteudo');
+    setTimeout(() => {
+      this.case = ('' as unknown) as CaseModel;
+      localStorage.removeItem('conteudo');
+      this.router.navigate(['../'])
+    }, 500)
     $('body').removeClass('modalOpen');
-    this.router.navigate(['../'])
+    this.modalOpen = false;
   }
 
 

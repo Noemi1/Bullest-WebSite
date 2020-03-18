@@ -61,7 +61,7 @@
   font-family: WonderMedium;
 }
 
-.footer__info-contato p, .footer__info-contato span {
+.footer__info-contato p {
   color: #fff;
   margin: 10px 0;
   display: block;
@@ -75,17 +75,14 @@
   color: #fff;
 }
 
-.footer__info-contato p .icon-span {
-  margin: 0 10px 0 0;
-}
-
-.footer__info-contato p .icon-span {
-  display: inline-block;
-}
-
 .icon-span {
-  padding: 5px 6px;
+  margin: 0 10px 0 0;
   border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-span.whatsapp {
@@ -113,8 +110,6 @@ span.icon-span.email {
   padding: 8px 0;
   margin: 30px 0 0;
   text-align: center;
-  /* background-color: #0f2130ad; */
-  /* border-top: 2px #0f2130ad solid; */
   color: #fff;
   font-size: 1.3rem;
   font-family: WonderThin;

@@ -1,0 +1,25 @@
+<section class="faq" id="faq">
+  <div class="wrapper">
+    <div class="faq__inner">
+      <h3 class="section-title">Dúvidas Frequentes</h3>
+      <p-accordion class="faq__duvidas">
+        <p-accordionTab class="faq__duvidas-item"
+            *ngFor="let duvida of this.duvidas"
+            [transitionOptions]="'500ms'">
+          <p-header
+            style="display: inline-flex;
+                  flex-flow: row-reverse;
+                  align-items: center;
+                  justify-content: space-between;"
+            class="duvidas__item-pergunta">
+            <h3> {{ duvida.Pergunta }}</h3>
+          </p-header>
+          <div class="duvidas__item-resposta">
+            <p>{{ duvida.Resposta }}</p>
+          </div>
+        </p-accordionTab>
+
+      </p-accordion>
+    </div>
+  </div>
+</section>

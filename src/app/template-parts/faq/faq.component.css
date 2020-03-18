@@ -1,0 +1,24 @@
+.faq__duvidas-item {
+  width: 100%;
+  margin: 10px 0 0;
+}
+
+
+.duvidas__item-pergunta h3 {
+  font-family: WonderMedium;
+}
+
+.duvidas__item-resposta {
+  padding: 0 1rem 0;
+}
+
+.faq__duvidas {
+  margin: 50px;
+}
+.ui-accordion .ui-accordion-header a {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}

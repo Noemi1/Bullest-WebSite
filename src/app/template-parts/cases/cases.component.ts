@@ -24,7 +24,6 @@ export class CasesComponent implements OnInit {
   }
   verMais(conteudo: CaseModel) {
     localStorage.setItem('conteudo', JSON.stringify(conteudo))
-    this.router.navigate(['cases', conteudo.Id])
-    $('body').addClass('modalOpen');
+      this.router.navigate(['cases', conteudo.Id])
   }
 }

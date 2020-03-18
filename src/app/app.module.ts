@@ -20,6 +20,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CasesComponent } from './template-parts/cases/cases.component';
 import { CasesDetalhesComponent } from './template-parts/cases-detalhes/cases-detalhes.component';
 import { ServicosComponent } from './template-parts/servicos/servicos.component';
+import { SobreNosComponent } from './template-parts/sobre-nos/sobre-nos.component';
+import { FaqComponent } from './template-parts/faq/faq.component';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { ServicosComponent } from './template-parts/servicos/servicos.component'
     CasesComponent,
     CasesDetalhesComponent,
     ServicosComponent,
+    SobreNosComponent,
+    FaqComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -45,6 +50,7 @@ import { ServicosComponent } from './template-parts/servicos/servicos.component'
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     SlickCarouselModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [ AppComponent,  ]

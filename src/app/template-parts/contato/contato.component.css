@@ -1,7 +1,7 @@
 .contato {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0 0;
+  padding: 0 0 0;
   min-height: 450px;
   background-color: #e9e8e8;
 }
@@ -9,12 +9,11 @@
 .contato__faleConosco {
   width: 36%;
   margin-left: 7.5%;
+  padding: 30px 0;
 }
 
-.contato__faleConosco h3 {
-  color: #333132;
-  font-family: WonderBold;
-  font-size: 5rem;
+.contato__faleConosco>h3 {
+  text-align: left;
 }
 
 .contato__faleConosco> {
@@ -23,7 +22,7 @@
 }
 
 .contato__faleConosco-form {
-  padding: 20px 0;
+  padding: 20px 0 0;
   display: flex;
   flex-flow: column;
 }
@@ -86,9 +85,9 @@
   border-radius: 4px;
   border: transparent;
   background: linear-gradient(120deg,
-            #0a0a0a 0%,
-            #0a0a0a 50%,
-            #319635 50%);
+      #0a0a0a 0%,
+      #0a0a0a 50%,
+      #319635 50%);
   background-size: 220%;
   color: #fff;
   font-size: 1.8rem;

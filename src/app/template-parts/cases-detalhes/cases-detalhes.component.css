@@ -26,13 +26,20 @@
 }
 
 .modal-inner {
+  position: absolute;
+  top: -100%;
   width: 90%;
   max-width: 600px;
-  background-color: #fff;
-  z-index: 1;
-  position: relative;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem;
+  z-index: 1;
+  background-color: #fff;
+  transition: 1s;
+  transform: translateY(-50%);
+}
+
+.modal-inner.modalOpen{
+  top: 50%;
 }
 
 .fecharModal {

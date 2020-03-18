@@ -1,22 +1,37 @@
-/* .servicos {
-    background: linear-gradient(180deg, #fff 50%, #e9e8e8);
-    padding: 10vh 0;
+.servicos {
+  padding: 3rem 0 4rem;
+  background-color: #fff;
+  height: calc(100vh + 100px);
 }
 
 .servicos-bg {
-    background-image:
-        linear-gradient(to right bottom,
-            rgb(244, 248, 251),
-            rgb(176, 206, 230),
-            rgb(104, 150, 189),
-            rgb(25, 53, 78));
-    height: calc(100vh);
-    transform: skewY(4deg);
-    background-attachment: fixed;
-} */
-.servicos {
-  height: 100vh;
-  padding: 5rem 0;
+  position: relative;
+  height: 100%;
+  padding: 10rem 0;
+  transform: skewY(-4deg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(../../../assets/img/city9.jpg);
+  box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+.servicos-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, rgba(10, 16, 21, 0.74) 10%, rgba(1, 14, 25, 0.92) 95%);
+  z-index: -1;
+  overflow: hidden;
+  background-position: left;
+}
+
+.servicos-bg .wrapper {
+  transform: skewY(3deg);
 }
 
 .servicos__card {
@@ -37,6 +52,22 @@
   justify-content: center;
   max-width: 1080px;
   margin: auto;
+}
+
+
+.servicos__header {
+  margin: 0 0 70px;
+}
+
+.servicos__header h3 {
+  padding: 0 0 2rem;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0.4);
+}
+
+.servicos__header p {
+  font-family: WonderRegular;
+  color: #4a4a4a;
 }
 
 .servicos__card-front {
@@ -90,8 +121,6 @@
   border-radius: 5px;
 }
 
-.servicos__card:hover {}
-
 .servicos__card:hover .servicos__card-front {
   transform: rotateY(-180deg);
 }
@@ -102,28 +131,19 @@
   visibility: visible;
 }
 
+.servicos__card-back h4 {
+  padding-bottom: 19px;
+  color: #333132;
+  font-size: 2rem;
+}
+
 .servicos__card-back p {
   color: #333132;
   letter-spacing: 1px;
   font-family: WonderMedium;
-  line-height: 23px;
+  line-height: 20px;
   text-align: left;
   font-size: 1.4rem;
   margin: auto;
-}
-.servicos__header h3 {
-  font-size: 5rem;
-  color: #333132;
-  font-family: WonderBold;
-  padding: 0 0 2rem;
-  letter-spacing: 0.5px;
-}
-
-.servicos__header {
-  margin: 0 0 70px;
-}
-
-.servicos__header p {
-  font-family: WonderRegular;
-  color: #4a4a4a;
+  cursor: default;
 }

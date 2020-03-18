@@ -11,9 +11,10 @@
           <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
         </div>
         <div class="navigation__links" [class.menuOpen]="this.classeActive">
+          <a (click)="scrollToSection('#sobreNos')"  class="header__navigation-link">Sobre Nós</a>
           <a (click)="scrollToSection('#servicos')"  class="header__navigation-link">Serviços</a>
           <a (click)="scrollToSection('#cases')"  class="header__navigation-link">Cases</a>
-          <a (click)="scrollToSection('#sobreNos')"  class="header__navigation-link">Sobre Nós</a>
+          <a (click)="scrollToSection('#faq')"  class="header__navigation-link">FAQ</a>
           <a (click)="scrollToSection('#contato')"  class="header__navigation-link">Contato</a>
         </div>
       </nav>

@@ -2,17 +2,10 @@
 /* Cases */
 .cases {
   padding: 50px 0px 60px;
-  margin-top: 140px;
 }
 
 .cases__inner>h3 {
   padding: 10px 0 50px;
-  font-size: 5rem;
-  font-family: WonderBold;
-  text-align: center;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  color: #333132;
 }
 
 .cases__slick {
@@ -104,8 +97,8 @@ ul.slick-dots {
   transition: .5s;
 }
 
-.cases__slick .slick-prev:before,
-.cases__slick .slick-next:before {
+.cases__slick .slick-prev::before,
+.cases__slick .slick-next::before {
   font-size: 0;
 }
 

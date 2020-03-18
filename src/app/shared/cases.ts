@@ -1,4 +1,5 @@
-export const cases = [
+import { CaseModel } from './case.model';
+export const cases: CaseModel[] = [
   {
     Id: 1,
     Imagem: '../../../../../assets/img/santander.jpeg',
