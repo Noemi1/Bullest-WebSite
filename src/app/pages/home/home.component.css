@@ -9,8 +9,8 @@
 
 .banner__imagem {
     box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to right bottom, rgba(105, 125, 142, 0.4) 10%, rgba(0, 19, 35, 1) 95%), url(../../../assets/img/banner-servicos.png);
-    background-image: linear-gradient(to right bottom, rgba(10, 16, 21, 0.74) 10%, rgba(1, 14, 25, 0.92) 95%), url(../../../assets/img/banner-servicos.png);
+    /* background-image: linear-gradient(to right bottom, rgba(105, 125, 142, 0.4) 10%, rgba(0, 19, 35, 1) 95%), url(../../../assets/img/banner-servicos.png); */
+    background-image: linear-gradient(to right bottom, rgba(10, 16, 21, 0.74) 10%, rgba(1, 14, 25, 0.92) 95%), url(../../../assets/img/city9.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
@@ -48,6 +48,8 @@
     color: #fff;
     font-family: WonderThin;
     text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 600px) {
