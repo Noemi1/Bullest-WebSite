@@ -1,8 +1,14 @@
 <section class="home__banner" id="banner__home" [class.full]="this.bannerFull">
-  <div class="banner__imagem">
-    <img src="../../../../../assets/img/logo-bullest-banner.png" alt="" srcset="">
-    <app-botao-scroll-down></app-botao-scroll-down>
-  </div>
+    <div class="banner__imagem">
+        <img src="../../../../../assets/img/logo-bullest-banner.png" alt="" srcset="">
+        <div class="banner__frases">
+            <div class="banner__frases-inner" *ngFor="let frase of this.frases">
+
+                {{ frase.Frase }}
+            </div>
+        </div>
+        <app-botao-scroll-down></app-botao-scroll-down>
+    </div>
 </section>
 <app-sobre-nos></app-sobre-nos>
 <app-servicos></app-servicos>

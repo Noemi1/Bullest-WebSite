@@ -1,80 +1,99 @@
 @import 'assets/css-aditional/fonts.css';
-
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all .2s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s ease;
 }
 
 *:not(input):focus {
-  outline: none;
+    outline: none;
 }
 
 *:active {
-  background: none;
+    background: none;
 }
 
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: WonderRegular;
+    font-size: 1.6rem;
+    font-family: WonderRegular;
 }
 
 p {
-  line-height: 23px;
+    line-height: 23px;
 }
 
 img {
-  max-width: 100%;
-  border: 0;
-  vertical-align: middle;
+    max-width: 100%;
+    border: 0;
+    vertical-align: middle;
 }
 
 a {
-  text-decoration: none;
-  color: #000;
-  cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-
 .wrapper {
-  margin: 0 auto;
-  width: 85%;
-  max-width: 1150px;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1150px;
 }
 
 .main {
-  min-height: calc(100vh - 70px - 230px);
+    min-height: calc(100vh - 70px - 230px);
 }
 
 body.modalOpen {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .section-title {
-  font-size: 6rem;
-  font-family: WonderBold;
-  color: #333132;
-  text-align: center;
-  letter-spacing: 0.5px;
+    font-size: 6rem;
+    font-family: WonderBold;
+    color: #333132;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 4rem;
+    }
+}
+
+
 /* #2b2a2a - Preto*/
+
+
 /* #df6a06 - Laranja */
+
+
 /* #ba5600 - Laranja Hover*/
+
+
 /* #235279 - Azul */
+
+
 /* #34b7f1 - Azul Icone */
+
+
 /* #085c08 - Verde Icone/Botão   */
+
+
 /* #ff0000 - Vermelho para erros */
+
+
 /* #e9e8e8 - Cinza Background */

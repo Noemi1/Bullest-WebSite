@@ -2,7 +2,8 @@
   height: 75px;
   background-color: #1f486b;
   background-color: #2b2a2a;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5); */
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.8);
   z-index: 5;
   transition: .3s;
 }

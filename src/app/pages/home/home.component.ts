@@ -1,5 +1,6 @@
 // tslint:disable
 import { Component, OnInit } from '@angular/core';
+import { frases } from './../../shared/frases-banner'
 
 import * as $ from 'jquery';
 
@@ -11,6 +12,7 @@ import * as $ from 'jquery';
 export class HomeComponent implements OnInit {
 
   bannerFull = false;
+  frases = frases as [];
 
 
   constructor() {

@@ -1,56 +1,54 @@
 .content-scroll-down {
-  display: flex;
-  align-items: flex-end;
-  height: auto;
-  margin-bottom: 0;
-  margin-top: calc(100vh - 190px);
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: calc(100vh - 190px);
 }
 
 .btn-scrollDown {
-  margin: auto;
-  display: block;
-  border: none;
-  font-size: 5rem;
-  background-color: transparent;
-  color: #fbfbfbc4;
-  transition: 1s;
-  animation: linear BotaoScrollDown 2s infinite;
+    margin: auto;
+    display: block;
+    border: none;
+    font-size: 5rem;
+    background-color: transparent;
+    color: #fbfbfbc4;
+    transition: 1s;
+    animation: linear BotaoScrollDown 2s infinite;
 }
 
 .btn-scrollDown:hover {
-  transition: 2s;
-  animation: none;
-  transform: scale(1.1);
+    transition: 2s;
+    animation: none;
+    transform: scale(1.1);
 }
 
 @keyframes BotaoScrollDown {
-  0% {
-    transform: translateY(0%);
-  }
+    0% {
+        transform: translateY(0%);
+    }
+    10% {
+        transform: translateY(10%);
+    }
+    25% {
+        transform: translateY(20%);
+    }
+    50% {
+        transform: translateY(30%);
+    }
+    75% {
+        transform: translateY(20%);
+    }
+    90% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
 
-  10% {
-    transform: translateY(10%);
-  }
-
-  25% {
-    transform: translateY(20%);
-  }
-
-  50% {
-    transform: translateY(30%);
-
-  }
-
-  75% {
-    transform: translateY(20%);
-
-  }
-
-  90% {
-    transform: translateY(10%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
+@media (max-width: 600px) {
+    .content-scroll-down {
+        margin: 0;
+    }
 }
