@@ -1,11 +1,21 @@
 /* Cases */
 
 .cases {
-    padding: 50px 0px 60px;
+    padding: 50px 0px;
+    display: flex;
+    align-items: stretch;
+    height: calc(100vh - 75px);
+    height: auto;
+    /* background-color: #f3f3f3; */
+    background-color: #fff;
+}
+
+.cases__inner {
+    height: 100%;
 }
 
 .cases__inner>h3 {
-    padding: 10px 0 50px;
+    padding: 10px 0 80px;
 }
 
 .cases__slick {
@@ -173,6 +183,10 @@ ul.slick-dots {
 .slick__footer ul {
     bottom: 0;
     top: 0;
+}
+
+.slick-slide div {
+    height: 100%;
 }
 
 @media (max-width: 600px) {}

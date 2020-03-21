@@ -1,22 +1,43 @@
 <header class="header" [class.fixed]="this.headerFixo" [class.relative]="!this.headerFixo">
     <div class="wrapper">
-      <nav class="header__navigation" [class.active]="this.classeActive">
-        <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
-          <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
-        </div>
-        <div class="header--mobile">
-          <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
-            <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
-          </div>
-          <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
-        </div>
-        <div class="navigation__links" [class.menuOpen]="this.classeActive">
-          <a (click)="scrollToSection('#sobreNos')"  class="header__navigation-link">Sobre Nós</a>
-          <a (click)="scrollToSection('#servicos')"  class="header__navigation-link">Serviços</a>
-          <a (click)="scrollToSection('#cases')"  class="header__navigation-link">Cases</a>
-          <a (click)="scrollToSection('#faq')"  class="header__navigation-link">FAQ</a>
-          <a (click)="scrollToSection('#contato')"  class="header__navigation-link">Contato</a>
-        </div>
-      </nav>
+        <nav class="header__navigation" [class.active]="this.classeActive">
+            <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
+                <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
+            </div>
+            <div class="header--mobile">
+                <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
+                    <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
+                </div>
+                <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
+            </div>
+            <div class="navigation__links" [class.menuOpen]="this.classeActive" [class.active]="this.menuAcessibilidadeOpen">
+                <a (click)="scrollToSection('#sobreNos')" class="header__navigation-link">Sobre Nós</a>
+                <a (click)="scrollToSection('#servicos')" class="header__navigation-link">Serviços</a>
+                <a (click)="scrollToSection('#cases')" class="header__navigation-link">Cases</a>
+                <a (click)="scrollToSection('#faq')" class="header__navigation-link">FAQ</a>
+                <a (click)="scrollToSection('#contato')" class="header__navigation-link">Contato</a>
+
+                <div class="acessibilidade" [class.active]="this.menuAcessibilidadeOpen" title="acessibilidade">
+                    <a (click)="abrirMenuAcessibilidade()" class="header__navigation-link header__navigation-link--acessibilidade">
+
+                        <span class="acessibilidade-icon">
+                            Acessibilidade
+                            <i class="fas fa-chevron-down" 
+                                [class.rotate]="!this.menuAcessibilidadeOpen">
+                            </i>
+                        </span>
+                    </a>
+                    <div class="acessibilidadeMenu" [class.acessibilidadeMenu--open]="this.menuAcessibilidadeOpen">
+                        <div class="acessibilidade-fonte">
+                            <button class="btn-acessibilidadeMenu" title="Aumentar fonte" (click)="aumentarFonte()">A+</button>
+                            <button class="btn-acessibilidadeMenu" title="Diminuir fonte">A-</button>
+                        </div>
+                        <button class="btn-acessibilidadeMenu" title="Contrastar">
+                            <i class="fas fa-adjust"></i> Contraste
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
 </header>

@@ -16,14 +16,26 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 import { ToastrModule } from 'ngx-toastr';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CasesComponent } from './template-parts/cases/cases.component';
 import { CasesDetalhesComponent } from './template-parts/cases-detalhes/cases-detalhes.component';
 import { ServicosComponent } from './template-parts/servicos/servicos.component';
 import { SobreNosComponent } from './template-parts/sobre-nos/sobre-nos.component';
 import { FaqComponent } from './template-parts/faq/faq.component';
-import { AccordionModule } from 'primeng/accordion';
+import { FeedComponent } from './template-parts/feed/feed.component';
 
+
+// Layout
+import { AccordionModule } from 'primeng/accordion';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'vertical',
+  slidesPerView: 'auto'
+};
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +51,7 @@ import { AccordionModule } from 'primeng/accordion';
     ServicosComponent,
     SobreNosComponent,
     FaqComponent,
+    FeedComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -49,10 +62,14 @@ import { AccordionModule } from 'primeng/accordion';
     HttpClientModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    SlickCarouselModule,
-    AccordionModule
+
+    // Layout
+    AccordionModule,
+    SwiperModule,
   ],
-  providers: [],
+  providers: [
+    { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG } ,
+  ],
   bootstrap: [ AppComponent,  ]
 })
 export class AppModule { }

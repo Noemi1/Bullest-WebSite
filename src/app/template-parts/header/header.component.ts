@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   classeActive = false;
   headerFixo = false;
+  menuAcessibilidadeOpen = false;
 
   constructor() { }
 
@@ -40,4 +41,15 @@ export class HeaderComponent implements OnInit {
       }, '300');
     }
   }
+  abrirMenuAcessibilidade() {
+    this.menuAcessibilidadeOpen = !this.menuAcessibilidadeOpen;
+    return this.menuAcessibilidadeOpen;
+  }
+  aumentarFonte() {
+
+  }
+  diminuirFonte() {}
+
+  contrastar() {}
+
 }

@@ -1,0 +1,33 @@
+<section class="feed">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="feed__inner">
+        <div class="blog-slider" [swiper]="this.swiperConfig" [(index)]="index">
+            <div class="blog-slider__wrp swiper-wrapper">
+                <div class="blog-slider__item swiper-slide" *ngFor="let feed of this.feeds">
+                    <div class="blog-slider__img">
+                        <img src="{{ feed.Imagem }}" alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                        <span class="blog-slider__code"> {{ feed.Data}}</span>
+                        <div class="blog-slider__title"> {{ feed.Titulo }}</div>
+                        <div class="blog-slider__text"> {{ feed.Texto }} </div>
+                        <button class="blog-slider__button">Leia Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__pagination"></div>
+        </div>
+    </div>
+
+    <canvas id="c"></canvas>
+</section>

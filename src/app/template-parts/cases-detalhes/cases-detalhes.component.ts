@@ -26,7 +26,7 @@ export class CasesDetalhesComponent implements OnInit {
     $('body').addClass('modalOpen')
     setTimeout(() => {
       this.modalOpen = true;
-    }, 500)
+    }, 100)
   }
   fecharModal() {
     setTimeout(() => {

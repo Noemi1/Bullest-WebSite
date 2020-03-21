@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   bannerFull = false;
   frases = frases as [];
 
-
   constructor() {
   }
 

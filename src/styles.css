@@ -27,7 +27,7 @@ body {
 }
 
 p {
-    line-height: 23px;
+    line-height: 2.3rem;
 }
 
 img {
@@ -66,6 +66,10 @@ body.modalOpen {
     color: #333132;
     text-align: center;
     letter-spacing: 0.5px;
+}
+
+button:active {
+    box-shadow: inset -1px -1px 6px 2px rgba(0, 0, 0, 0.3)
 }
 
 @media (max-width: 600px) {

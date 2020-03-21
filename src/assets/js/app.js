@@ -30,5 +30,7 @@ $(document).ready(() => {
         vertical: true,
         touchMove: false,
         swipe: false
-    })
-})
+    });
+
+
+});
