@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 
+import { Animacoes } from "../../shared/animacoes";
 import { feeds } from "./../../shared/feed";
 import * as $ from 'jquery';
 
@@ -14,40 +15,45 @@ export class FeedComponent implements OnInit, AfterViewInit {
 
   feeds = feeds;
   swiperConfig;
-  mySwiper;
-  index;
 
   constructor(
-    private elementRef: ElementRef
+    private animacoes: Animacoes,
   ) {
     this.swiperConfig = {
       direction: 'vertical',
       spaceBetween: 30,
       effect: 'fade',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      autoplay: 3000,
+      keyboard: true,
+      forceToAxis: true,
+      observer: true, 
+      observeParents: true,
+
       mousewheel: {
         invert: false,
       },
-      // autoHeight: true,
+
       pagination: {
         el: '.blog-slider__pagination',
         clickable: true,
       },
-
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-
-      autoplay: 3000,
+      breakpoints: {
+        600: {
+          direction: 'horizontal',
+        }
+      }
 
     };
   }
 
   ngOnInit(): void {
-    this.bubbles();
-    
-   
+
+
   }
   ngAfterViewInit(): void {
-    // this.animacaoTransform();
+    this.animacoes.bubbles();
 
   }
   animacaoTransform() {
@@ -85,30 +91,5 @@ export class FeedComponent implements OnInit, AfterViewInit {
     }, false);
   }
 
-  bubbles() {
-    for (let x = 1; x <= $('.circle').length; x++) {
-      $('.circle:nth-child(' + x + ')');
-      $('.circle:nth-child(' + x + ')').css({
-        top: parseInt((Math.random() * (100 - 0) + 0).toString()) + '%',
-        left: parseInt((Math.random() * (100 - 0) + 0).toString()) + '%'
-      })
-      
-      setInterval(() => {
-        let a = (Math.random() * (45 - 0) + 0);
-        let b = (Math.random() * (45 - 0) + 0);
-
-        // console.log(Math.random() * (45 - 0) + 0);
-        // console.log(Math.random() * (100 - 60) + 60);
-      // console.log((Math.random() * (45 - 0) + 0) && (Math.random() * (100 - 60) + 60))
-      console.log(Math.random() * (45 - 0) + 0)
-      
-        $('.circle:nth-child(' + x + ')').css({
-          top: parseInt(a.toString()) + '%',
-          left: parseInt(b.toString()) + '%'
-        })
-      }, 3000);
-    }
-
-  }
 
 }

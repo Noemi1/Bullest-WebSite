@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent implements OnInit {
+  telefoneMask: string;
 
   constructor(
     private serviceEmail: EnviarEmailService,
@@ -21,6 +22,7 @@ export class ContatoComponent implements OnInit {
   }
 
   enviarEmail(form: NgForm) {
+    console.log(form.value)
     this.serviceEmail.postEmail(form.value)
     .subscribe(
       res => {
@@ -33,7 +35,33 @@ export class ContatoComponent implements OnInit {
            conosco pelo whatsapp ou pelo email`,
           `Erro`);
       });
-    console.log(form.value);
+  }
+  verificaTelefone(t) {
+
+    t = t.value.replace('(').replace(')').replace('.').replace('-')
+    t = t.trim();
+    console.log(t)
+    let ddd = `(${t.slice(0,2)})`
+
+    let l = t.length
+    
+    if (l <= 2) {
+      this.telefoneMask = `${ddd}`;
+      console.log(this.telefoneMask);
+      return this.telefoneMask;
+    } else if (l <= 10 && l >= 4) {
+      this.telefoneMask = `${ddd} ${t.slice(2,6)}-${t.slice(6,10)}`;
+      console.log(this.telefoneMask);
+      return this.telefoneMask;
+    } else if (l = 11){
+      this.telefoneMask = `${ddd} ${t.slice(2,3)}.${t.slice(3,7)}-${t.slice(7,11)}`;
+      console.log(this.telefoneMask);
+      return this.telefoneMask;
+    } else {
+      this.telefoneMask = `${ddd} ${t.value}`;
+      console.log(this.telefoneMask);
+      return this.telefoneMask;
+    }
   }
 
 }

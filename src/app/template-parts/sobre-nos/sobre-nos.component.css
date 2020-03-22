@@ -52,6 +52,9 @@
 }
 
 @media (max-width: 600px) {
+    .sobre-nos {
+        background-color: rgba(0, 0, 0, 0.051);
+    }
     .sobre-nos__conteudo {
         flex-flow: column;
         width: 100%;
@@ -60,6 +63,8 @@
         width: 100%;
         margin: 0 0 10px;
         text-align: center;
+        font-family: WonderRegular;
+        font-size: 1.8rem;
     }
     .sobre-nos__conteudo p:first-child {
         text-align: center;

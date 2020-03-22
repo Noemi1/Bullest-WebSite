@@ -51,4 +51,7 @@
     .content-scroll-down {
         margin: 0;
     }
+    button.btn-scrollDown {
+        margin: auto auto 2rem;
+    }
 }

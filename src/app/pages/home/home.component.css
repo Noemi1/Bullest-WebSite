@@ -48,10 +48,18 @@
     line-height: 30px;
     font-size: 2.4rem;
     color: #fff;
-    font-family: WonderThin;
     text-align: center;
     letter-spacing: 1px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    /* font-family: WonderRegular;
+    font-family: WonderBold;
+    font-family: WonderExtraBold;
+    font-family: WonderBlack;
+    font-family: WonderRegularItalic;
+    font-family: WonderBoldItalic;
+    font-family: WonderBlackItalic;
+    font-family: WonderMedium; */
+    font-family: WonderThinItalic;
 }
 
 @media (max-width: 600px) {
@@ -64,12 +72,20 @@
         flex-flow: column;
     }
     .banner__imagem img {
-        width: 100%;
+        width: 80%;
         position: static;
         left: unset;
         top: unset;
         transform: none;
         height: auto;
         background-size: contain;
+        margin: auto;
+    }
+    .banner__frases {
+        width: 95%;
+        top: 100%;
+    }
+    .banner__frases-inner {
+        height: 150px;
     }
 }

@@ -118,11 +118,11 @@
     border-radius: 5px;
 }
 
-.servicos__card:not(.static):hover .servicos__card-front {
+.servicos__card:hover .servicos__card-front {
     transform: rotateY(-180deg);
 }
 
-.servicos__card:not(.static):hover .servicos__card-back {
+.servicos__card:hover .servicos__card-back {
     transform: rotate(0);
     opacity: 1;
     visibility: visible;
@@ -155,10 +155,60 @@
         height: unset;
     }
     .servicos-bg {
-        padding: 2rem 0;
         height: unset;
+        padding: 10px 0;
     }
     .servicos__inner {
+        width: 90%;
         flex-flow: column;
+        margin: 50px auto 0;
+    }
+    .servicos__header {
+        margin: 20px 0;
+    }
+    .servicos__card {
+        min-height: unset;
+        width: 100%;
+        margin: 0 auto 70px;
+        background-color: #f5f5f5;
+        box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.7);
+        position: relative;
+    }
+    .servicos__card:hover .servicos__card-front {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        backface-visibility: visible;
+    }
+    .servicos__card-front {
+        box-shadow: none;
+        height: 0;
+        padding: 0;
+    }
+    .servicos__card-front img {
+        position: absolute;
+        transform: translate(20%, -40%);
+        right: 0;
+        top: 0;
+    }
+    .servicos__card-front h4 {
+        display: none;
+    }
+    .servicos__card-back {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        position: static;
+        backface-visibility: visible;
+        box-shadow: none;
+        padding: 20px;
+    }
+    .servicos__card-back p {
+        overflow: visible;
+        width: 85%;
+        margin: 0;
+    }
+    .servicos__card-back h4 {
+        padding-bottom: 21px;
     }
 }

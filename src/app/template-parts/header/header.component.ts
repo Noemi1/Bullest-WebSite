@@ -12,7 +12,8 @@ export class HeaderComponent implements OnInit {
   classeActive = false;
   headerFixo = false;
   menuAcessibilidadeOpen = false;
-
+  contrasteAtivo = false;
+  
   constructor() { }
 
   ngOnInit() {
@@ -50,6 +51,12 @@ export class HeaderComponent implements OnInit {
   }
   diminuirFonte() {}
 
-  contrastar() {}
+    
+
+  contrasteToggle() {
+    this.contrasteAtivo = !this.contrasteAtivo;
+    $('body').toggleClass('contraste');
+    return this.contrasteAtivo;
+  }
 
 }

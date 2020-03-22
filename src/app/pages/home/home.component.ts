@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.alterarBanner();
   }
-    alterarBanner() {
+  alterarBanner() {
     $(window).on('scroll', () => {
       if ($(window).scrollTop() > 70) {
         this.bannerFull = true;
@@ -30,5 +30,6 @@ export class HomeComponent implements OnInit {
       return this.bannerFull;
     });
   }
+
 
 }

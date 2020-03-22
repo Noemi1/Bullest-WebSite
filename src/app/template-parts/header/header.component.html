@@ -32,7 +32,7 @@
                             <button class="btn-acessibilidadeMenu" title="Aumentar fonte" (click)="aumentarFonte()">A+</button>
                             <button class="btn-acessibilidadeMenu" title="Diminuir fonte">A-</button>
                         </div>
-                        <button class="btn-acessibilidadeMenu" title="Contrastar">
+                        <button class="btn-acessibilidadeMenu" title="Contrastar" (click)="contrasteToggle()" [class.active]="this.contrasteAtivo">
                             <i class="fas fa-adjust"></i> Contraste
                         </button>
                     </div>

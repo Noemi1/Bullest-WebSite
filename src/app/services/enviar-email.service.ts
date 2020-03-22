@@ -11,8 +11,7 @@ constructor(
 ) { }
 
   postEmail(dados) {
-    const email = this.http.post('././mail/contact_me.php', dados);
-    return email;
+    console.log(dados)
+    return this.http.post('./enviar-email.php', dados);
   }
-
 }

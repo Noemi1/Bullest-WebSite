@@ -18,7 +18,10 @@ $(document).ready(() => {
                 slidesToScroll: 1,
             }
         }],
-    })
+        initialSlide: 1,
+        centerMode: true,
+        centerPadding: 0
+    });
     $('.banner__frases').slick({
         infinite: false,
         slidesToScroll: 1,
@@ -27,9 +30,10 @@ $(document).ready(() => {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 1000,
+        speed: 2000,
         vertical: true,
         touchMove: false,
-        swipe: false
+        swipe: false,
     });
 
 

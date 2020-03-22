@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 import { CaseModel } from './../../shared/case.model';
 import { cases } from './../../shared/cases';
@@ -17,10 +18,11 @@ export class CasesDetalhesComponent implements OnInit {
 
   constructor(
     private router: Router,
+    
   ) { }
 
-  ngOnInit() {
-    console.log(localStorage.getItem('conteudo'))
+  ngOnInit() {    
+    
     this.case = JSON.parse(localStorage.getItem('conteudo'));
 
     $('body').addClass('modalOpen')
@@ -33,7 +35,7 @@ export class CasesDetalhesComponent implements OnInit {
       this.case = ('' as unknown) as CaseModel;
       localStorage.removeItem('conteudo');
       this.router.navigate(['../'])
-    }, 500)
+    }, 600)
     $('body').removeClass('modalOpen');
     this.modalOpen = false;
   }

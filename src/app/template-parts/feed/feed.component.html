@@ -1,17 +1,7 @@
 <section class="feed">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <!-- <div class="circle" *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10]"></div> -->
     <div class="feed__inner">
-        <div class="blog-slider" [swiper]="this.swiperConfig" [(index)]="index">
+        <div class="blog-slider" [swiper]="this.swiperConfig">
             <div class="blog-slider__wrp swiper-wrapper">
                 <div class="blog-slider__item swiper-slide" *ngFor="let feed of this.feeds">
                     <div class="blog-slider__img">
@@ -25,6 +15,8 @@
                     </div>
                 </div>
             </div>
+            <button type="button" class="swiper-button swiper-button-prev"><i class="fas fa-chevron-left"></i></button>
+            <button type="button" class="swiper-button swiper-button-next"><i class="fas fa-chevron-right"></i></button>
             <div class="blog-slider__pagination"></div>
         </div>
     </div>

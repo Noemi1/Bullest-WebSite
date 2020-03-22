@@ -1,32 +1,32 @@
 <section class="cases" id="cases">
-  <div class="wrapper">
-    <div class="cases__inner">
-      <h3 class="section-title">Conheça Nosso Trabalho</h3>
-      <div class="cases__slick">
-        <button class="slick-arrow slick-prev">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="slick-arrow slick-next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="slick-content">
-          <div class="cases__slick-item" *ngFor="let case of this.cases">
-            <div class="logo-img" [style.backgroundImage]="'url('+ case.Imagem +')'"></div>
-            <div class="logo-title">
-              <h3 *ngIf="case.Empresa !== null" >
-                {{ case.Empresa }}
-              </h3>
-              <p *ngIf="case.Descricao !== null" >
-                {{ case.Descricao }}
-              </p>
+    <div class="circle" *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10]"></div>
+    <div class="wrapper">
+        <div class="cases__inner">
+            <h3 class="section-title">Conheça Nosso Trabalho</h3>
+            <div class="cases__slick">
+                <button class="slick-arrow slick-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slick-arrow slick-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slick-content">
+                    <div class="cases__slick-item" *ngFor="let case of this.cases">
+                        <div class="logo-img" [style.backgroundImage]="'url('+ case.Imagem +')'"></div>
+                        <div class="logo-title">
+                            <h3 *ngIf="case.Empresa !== null">
+                                {{ case.Empresa }}
+                            </h3>
+                            <p *ngIf="case.Descricao !== null">
+                                {{ case.Descricao }}
+                            </p>
+                        </div>
+                        <button class="ver-mais" (click)="verMais(case)">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="slick__footer"></div>
             </div>
-            <button class="ver-mais" (click)="verMais(case)">Ver Mais</button>
-          </div>
         </div>
-        <div class="slick__footer"></div>
-      </div>
     </div>
-  </div>
 </section>
 <router-outlet></router-outlet>
-

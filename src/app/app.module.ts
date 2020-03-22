@@ -15,7 +15,7 @@ import { HeaderComponent } from './template-parts/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule, IndividualConfig } from 'ngx-toastr';
 import { CasesComponent } from './template-parts/cases/cases.component';
 import { CasesDetalhesComponent } from './template-parts/cases-detalhes/cases-detalhes.component';
 import { ServicosComponent } from './template-parts/servicos/servicos.component';
@@ -29,12 +29,18 @@ import { AccordionModule } from 'primeng/accordion';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
+
+import { Animacoes } from "./shared/animacoes";
 
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'vertical',
   slidesPerView: 'auto'
 };
+
+export let options: Partial<IConfig> | (() => Partial<IConfig>);
  
 @NgModule({
   declarations: [
@@ -66,9 +72,12 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     // Layout
     AccordionModule,
     SwiperModule,
+    NgxMaskModule.forRoot(options),
+    
   ],
   providers: [
-    { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG } ,
+    { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG, } ,
+    Animacoes
   ],
   bootstrap: [ AppComponent,  ]
 })

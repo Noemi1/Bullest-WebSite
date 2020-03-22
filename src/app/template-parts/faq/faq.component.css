@@ -24,9 +24,13 @@
     width: 100%;
     margin: 20px 0 0;
     display: block;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
     border-radius: 7px;
     overflow: hidden;
+}
+
+:host>>>.ui-accordion .ui-accordion-header {
+    margin-top: 0;
 }
 
 :host>>>.faq__duvidas-item a {
@@ -35,10 +39,12 @@
     flex-flow: row-reverse;
     justify-content: space-between;
     padding: 1.4rem 2rem;
-    color: #fff;
     letter-spacing: 1px;
     font-family: WonderThin;
+    color: #fff;
+    /* color: #2b2a2a; */
     background-color: #2b2a2a;
+    /* background-color: #f9f9f9; */
 }
 
 :host>>>.faq__duvidas-item .ui-state-active a {
