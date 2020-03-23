@@ -1,180 +1,237 @@
 .contato {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 0 0;
-  min-height: 450px;
-  background-color: #e9e8e8;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0;
+    min-height: 450px;
+    background-color: #e9e8e8;
 }
 
 .contato__faleConosco {
-  width: 36%;
-  margin-left: 7.5%;
-  padding: 30px 0;
+    width: 36%;
+    margin-left: 7.5%;
+    padding: 30px 0;
 }
 
 .contato__faleConosco>h3 {
-  text-align: left;
+    text-align: left;
 }
 
 .contato__faleConosco> {
-  font-family: WonderRegularItalic;
-  font-size: 1.8rem;
+    font-family: WonderRegularItalic;
+    font-size: 1.8rem;
 }
 
 .contato__faleConosco-form {
-  padding: 20px 0 0;
-  display: flex;
-  flex-flow: column;
+    padding: 20px 0 0;
+    display: flex;
+    flex-flow: column;
 }
 
 .contato__faleConosco-form p {
-  display: flex;
-  flex-flow: column;
-  padding: 0px 0 10px;
-  margin: 5px 0 0;
-  text-transform: capitalize;
+    display: flex;
+    flex-flow: column;
+    padding: 0px 0 10px;
+    margin: 5px 0 0;
+    text-transform: capitalize;
 }
 
 .contato__campo-input {
-  margin: 5px 0 0;
+    margin: 5px 0 0;
 }
 
 .contato__campo-input--textarea {
-  height: 110px;
-  margin: 5px 0;
-  resize: none;
+    height: 110px;
+    margin: 5px 0;
+    resize: none;
 }
 
 .contato__campo-input--textarea,
 .contato__campo-input {
-  border: 1px #939698 solid;
-  border-radius: 3px;
-  padding: 10px 10px;
-  font-size: 1.5rem;
-  font-family: WonderRegular;
-  color: #333132;
+    border: 1px #939698 solid;
+    border-radius: 3px;
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    font-family: WonderRegular;
+    color: #333132;
 }
 
 .contato__campo-input--textarea::placeholder,
 .contato__campo-input::placeholder {
-  font-size: 1.5rem;
-  font-family: WonderRegular;
-  color: #333132;
+    font-size: 1.5rem;
+    font-family: WonderRegular;
+    color: #333132;
 }
 
 .contato__campo-input--textarea:focus,
 .contato__campo-input:focus {
-  outline: none;
-  border: 2px rgb(156, 204, 239) solid;
+    outline: none;
+    border: 2px rgb(156, 204, 239) solid;
 }
 
 .contato__faleConosco-form div.contato__faleConosco--footer {
-  width: 100%;
-  display: flex;
-  align-items: baseline;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
 }
 
 .contato__faleConosco-form div.contato__faleConosco--footer span {
-  color: red;
-  font-family: WonderBold;
+    color: red;
+    font-family: WonderBold;
 }
 
 .btn-enviarMensagem {
-  margin: 0 0 0 auto;
-  padding: 12px 30px;
-  border-radius: 4px;
-  border: transparent;
-  background: linear-gradient(120deg,
-      #0a0a0a 0%,
-      #0a0a0a 50%,
-      #319635 50%);
-  background-size: 220%;
-  color: #fff;
-  font-size: 1.8rem;
-  text-transform: capitalize;
-  font-family: WonderRegular;
-  letter-spacing: 1.2px;
-  transition: .2s;
-  text-shadow: 1px 1px 3px #696969;
+    margin: 0 0 0 auto;
+    padding: 12px 30px;
+    border-radius: 4px;
+    border: transparent;
+    background: linear-gradient(120deg, #0a0a0a 0%, #0a0a0a 50%, #319635 50%);
+    background-size: 220%;
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-family: WonderRegular;
+    letter-spacing: 1.2px;
+    transition: .2s;
+    text-shadow: 1px 1px 3px #696969;
 }
 
 .btn-enviarMensagem:hover {
-  transition: 1s;
-  background-position: 100%;
-  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
-  transition: .2s;
+    transition: 1s;
+    background-position: 100%;
+    box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+    transition: .2s;
 }
 
 .btn-enviarMensagem.disabled:hover {
-  background-position: unset;
-  cursor: default;
+    background-position: unset;
+    cursor: default;
 }
 
 .contato__comoChegar {
-  width: 50%;
+    width: 50%;
 }
 
 .img-mapa {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: flex-start;
-  justify-content: flex-start;
-  filter: brightness(0.9);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    filter: brightness(0.9);
 }
 
 .campo-obrigatorio {
-  font-size: 1.8rem;
-  color: red;
-  font-family: WonderBold;
+    font-size: 1.8rem;
+    color: red;
+    font-family: WonderBold;
 }
 
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
-  border-color: red;
+    border-color: red;
 }
 
 input.ng-valid.ng-touched,
 textarea.ng-valid.ng-touched {
-  border: 1px rgb(8, 92, 8) solid;
+    border: 1px rgb(8, 92, 8) solid;
 }
 
 input.ng-invalid.ng-touched:focus,
 textarea.ng-invalid.ng-touched:focus,
 input.ng-valid.ng-touched:focus,
 textarea.ng-valid.ng-touched:focus {
-  border: 2px rgb(156, 204, 239) solid;
+    border: 2px rgb(156, 204, 239) solid;
 }
 
 
+/* Acessibilidade */
+
+.contraste.contato {
+    background-color: #000;
+}
+
+.contraste .contato__faleConosco-form {
+    color: #fce300;
+    font-family: WonderMedium;
+    font-size: 1.8rem;
+}
+
+.contraste .campo-obrigatorio {
+    color: #fce300;
+    font-size: 2rem;
+}
+
+.contraste .contato__campo-input {
+    border: 2px #fce300 solid;
+    background-color: #fff27b;
+    color: #000;
+    font-size: 1.8rem;
+    font-family: WonderMedium;
+}
+
+.contraste .contato__campo-input::placeholder {
+    color: #000;
+    font-size: 1.7rem;
+    font-family: WonderMedium;
+}
+
+.contraste .contato__campo-input.ng-valid {
+    border: 3px rgb(8, 92, 8) solid;
+    background-color: rgb(91, 228, 91);
+}
+
+.contraste .contato__campo-input.ng-invalid.ng-touched {
+    border: 3px red solid;
+    background-color: #f5afaf;
+}
+
+.contraste .contato__faleConosco--footer span {
+    color: #fce300;
+}
+
+.contraste .btn-enviarMensagem.disabled {
+    background: black;
+    color: #fce300;
+    border: 2px #fce300 solid;
+}
+
+.contraste .btn-enviarMensagem {
+    background: #fce300;
+    color: #000;
+    font-family: WonderExtraBold;
+    text-shadow: none;
+}
+
+.contraste .contato__comoChegar {
+    filter: invert(1) saturate(5) contrast(1.2) hue-rotate(89deg);
+}
+
+
+/* Fim Acessibilidade */
+
 @media (max-width: 600px) {
-  .contato {
-    flex-flow: column;
-    padding: 20px;
-  }
-
-  .contato__faleConosco {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  .contato__comoChegar {
-    width: 100%;
-    height: 210px;
-  }
+    .contato {
+        flex-flow: column;
+        padding: 20px;
+    }
+    .contato__faleConosco {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .contato__comoChegar {
+        width: 100%;
+        height: 210px;
+    }
 }
 
 @media (max-width: 400px) {
-  .contato__faleConosco h3 {
-    font-size: 3rem;
-  }
-
-  .contato__faleConosco--footer {
-    flex-flow: column;
-  }
-
-  button.btn-enviarMensagem.disabled {
-    margin: 10px 0;
-  }
-
+    .contato__faleConosco h3 {
+        font-size: 3rem;
+    }
+    .contato__faleConosco--footer {
+        flex-flow: column;
+    }
+    button.btn-enviarMensagem.disabled {
+        margin: 10px 0;
+    }
 }

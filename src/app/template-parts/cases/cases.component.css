@@ -63,7 +63,6 @@
     width: 90%;
     margin: 0 auto;
     height: auto;
-    display: flex;
 }
 
 .cases__slick-footer {
@@ -171,10 +170,6 @@ ul.slick-dots {
     border: 4px #ba5600 solid;
 }
 
-.slick-slide div {
-    height: 97%;
-}
-
 .slick__footer {
     width: 100%;
     position: relative;
@@ -195,37 +190,41 @@ ul.slick-dots {
 
 :host>>>.slick-slide {
     margin: 9px 10px 5px;
-    height: 95%;
-    position: relative
+    position: relative;
+    height: 350px;
 }
 
-:host>>>.slick-slide>div {
-    height: 100%;
-}
-
-:host>>>.slick-dots li.slick-active button:before {
-    background-color: black;
-    border-radius: 3px;
-    transition: .5s;
-    width: 20px;
-}
-
-:host>>>.slick-dots li button:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    transition: .5s;
+:host>>>.slick-dots {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
 }
 
 :host>>>.slick-dots li {
-    width: 10px;
-    height: 10px;
     padding: 3px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+:host>>>.slick-dots li button {
+    width: 6px;
+    height: 6px;
+    background-color: #949494;
+    border-radius: 50%;
+    transition: .5s;
+    border: none;
+    font-size: 0;
+}
+
+:host>>>.slick-dots li.slick-active button {
+    background-color: #000;
+    border-radius: 3px;
+    transition: .5s;
+    width: 20px;
 }
 
 :host>>>.slick-current {
@@ -251,6 +250,76 @@ ul.slick-dots {
     width: 100%;
     transition: 0.6s;
 }
+
+
+/* Acessibilidade */
+
+.contraste .circle {
+    background-color: #fff2ccb0;
+    box-shadow: inset 5px 2px 15px 8px rgba(0, 0, 0, 0.6);
+}
+
+.contraste .cases__slick-item {
+    background-color: #000000;
+    border: 2px #fce300 solid;
+}
+
+.contraste .slick-slide::after {
+    background-color: #fce300!important;
+}
+
+.contraste .logo-img {
+    filter: contrast(2.1);
+    background-color: #fff;
+    background-size: 100%;
+    border: 5px #fce300 solid;
+}
+
+.contraste .logo-title {
+    color: #fce300;
+    font-family: WonderMedium;
+    padding: 20px 0;
+}
+
+.contraste .logo-title p {
+    font-family: WonderRegular;
+    font-size: 1.9rem;
+}
+
+.contraste .ver-mais {
+    background-color: #fce300;
+    color: #000;
+    font-family: WonderBold;
+}
+
+.contraste .slick-current {
+    border-top: none;
+}
+
+.contraste .ver-mais:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.contraste .cases__slick .slick-arrow {
+    background-color: #fce300;
+    color: #000;
+}
+
+.contraste .cases__slick .slick-arrow:hover {
+    background-color: #fff;
+}
+
+:host>>>.contraste .slick-dots li button {
+    background-color: #ffffff;
+}
+
+:host>>>.contraste .slick-dots li.slick-active button {
+    background-color: #fce300;
+}
+
+
+/* Fim Acessibilidade */
 
 @media (max-width: 600px) {
     .cases__inner>h3 {

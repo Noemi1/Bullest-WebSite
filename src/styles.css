@@ -26,6 +26,15 @@ body {
     font-family: WonderRegular;
 }
 
+body.contraste {
+    user-select: text;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.modalOpen {
+    overflow: hidden;
+}
+
 p {
     line-height: 2.3rem;
 }
@@ -50,6 +59,18 @@ button:active {
     box-shadow: inset -1px -1px 6px 2px rgba(0, 0, 0, 0.3)
 }
 
+:host>>>.contraste::-moz-selection {
+    background-color: #fce300!important;
+    color: #000!important;
+    user-select: text;
+}
+
+:host>>>.contraste::selection {
+    background-color: #fce300!important;
+    color: #000!important;
+    user-select: text;
+}
+
 .wrapper {
     margin: 0 auto;
     width: 85%;
@@ -60,16 +81,21 @@ button:active {
     min-height: calc(100vh - 70px - 230px);
 }
 
-body.modalOpen {
-    overflow: hidden;
-}
-
 .section-title {
     font-size: 6rem;
     font-family: WonderBold;
     color: #333132;
     text-align: center;
     letter-spacing: 0.5px;
+}
+
+.contraste h3.section-title {
+    color: #fce300!important;
+}
+
+.contraste section {
+    border-top: 2px #fce300 solid;
+    border-bottom: 2px #fce300 solid;
 }
 
 .circle {
@@ -87,6 +113,10 @@ body.modalOpen {
     .section-title {
         font-size: 4rem;
     }
+}
+
+.contraste-favicon {
+    display: none;
 }
 
 

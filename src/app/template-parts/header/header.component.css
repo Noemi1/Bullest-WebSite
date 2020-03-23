@@ -64,16 +64,12 @@
     text-transform: capitalize;
 }
 
-.navigation__links.active .header__navigation-link {
-    background-color: #2b2a2afa;
-}
-
 .header__navigation-link:active {
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: inset -1px -1px 6px 2px rgba(0, 0, 0, 0.5)
 }
 
-.header__navigation-link:not(.header__navigation-link--acessibilidade):hover {
+.header__navigation-link:hover {
     background-color: rgba(0, 0, 0, 0.4);
     font-family: WonderMedium;
 }
@@ -94,10 +90,6 @@
 }
 
 .header__navigation-link--acessibilidade:hover {
-    background-color: #1a1919;
-}
-
-.acessibilidade.active .header__navigation-link--acessibilidade {
     background-color: #1a1919;
 }
 
@@ -155,20 +147,18 @@
 
 .header--mobile {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 75px;
-    padding: 0 2rem;
-    justify-content: space-between;
-    background-color: #2b2a2a;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
     z-index: 5;
     transition: .3s;
+    align-items: center;
+    justify-content: center;
 }
 
-.header__navigation.active .navigation__links.menuOpen {
+.header__navigation.active .navigation__links.menuMobileOpen {
+    top: 60px;
+}
+
+.header.fixed .navigation__links.menuMobileOpen {
     top: 60px;
 }
 
@@ -176,18 +166,12 @@
     display: none;
 }
 
-.btn-acessibilidadeMenu.active {
-    background-color: #ca5d00;
-    border-color: transparent;
-}
-
-.btn-acessibilidadeMenu.active:hover {
-    background-color: #aa5001;
-    border-color: #aa5001;
-}
-
 .btn-acessibilidadeMenu:active {
     box-shadow: inset 0px 0px 9px 7px rgba(0, 0, 0, 0.3);
+}
+
+.navigation__logo--contraste {
+    display: none;
 }
 
 
@@ -202,7 +186,6 @@
     }
     .header--mobile {
         display: flex;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
     }
     .relative .header--mobile {
         width: 100%;
@@ -225,7 +208,7 @@
     }
     .navigation__links {
         position: absolute;
-        top: 70px;
+        top: 75px;
         right: 0;
         width: 170px;
         height: 0;
@@ -236,7 +219,7 @@
         transition: 1s;
         z-index: 1;
     }
-    .navigation__links.menuOpen {
+    .navigation__links.menuMobileOpen {
         height: auto;
     }
     .header__navigation-link {
@@ -252,7 +235,7 @@
         opacity: 0;
         visibility: hidden;
     }
-    .navigation__links.menuOpen .header__navigation-link {
+    .navigation__links.menuMobileOpen .header__navigation-link {
         opacity: 1;
         visibility: visible;
         transition: opacity 5s;
@@ -293,26 +276,106 @@
     .header__menuMobile::before {
         top: -10px;
     }
-    .header__menuMobile.active {
+    .header__menuMobile.menuMobileOpen {
         visibility: hidden;
-        background-color: #1f486b;
         transition: .7s;
+        background-color: #000;
     }
-    .header__menuMobile.active::after,
-    .header__menuMobile.active::before {
+    .header__menuMobile.menuMobileOpen::after,
+    .header__menuMobile.menuMobileOpen::before {
         visibility: visible;
         top: 0;
         width: 30px;
         left: 10px;
         transition: .7s hidden 0;
     }
-    .header__menuMobile.active::before {
+    .header__menuMobile.menuMobileOpen::before {
         transform: rotate(45deg);
     }
-    .header__menuMobile.active::after {
+    .header__menuMobile.menuMobileOpen::after {
         transform: rotate(-45deg);
     }
+    .contraste .header__menuMobile,
+    .contraste .header__menuMobile::after,
+    .contraste .header__menuMobile::before {
+        background-color: #fce300;
+    }
+    .contraste .navigation__links,
+    .contraste .header__menuMobile.menuMobileOpen {
+        background-color: #000;
+    }
 }
+
+
+/* Acessibilidade */
+
+
+/* #cc9600 - Laranja Escuro */
+
+
+/* #ffbc00 - Laranga Medio*/
+
+
+/* #fce300 - Amarelo*/
+
+
+/* #fff2cc - Amarelo Claro*/
+
+.contraste.header,
+.contraste .header__navigation-link--acessibilidade,
+.contraste .acessibilidade.active .header__navigation-link--acessibilidade,
+.contraste .btn-acessibilidadeMenu {
+    background-color: #000;
+}
+
+.contraste .header__navigation-link:hover,
+.contraste .acessibilidade.active .header__navigation-link--acessibilidade:hover,
+.contraste .btn-acessibilidadeMenu:hover,
+.contraste .btn-acessibilidadeMenu.active {
+    background-color: #fce300;
+}
+
+.contraste .header__navigation-link,
+.contraste .btn-acessibilidadeMenu {
+    color: #fce300;
+}
+
+.contraste .header__navigation-link:hover,
+.contraste .acessibilidade.active .header__navigation-link--acessibilidade:hover,
+.contraste .btn-acessibilidadeMenu:hover,
+.contraste .btn-acessibilidadeMenu.active,
+.contraste .btn-acessibilidadeMenu.active:hover {
+    color: #000;
+}
+
+.btn-acessibilidadeMenu.active:hover {
+    background-color: #ffbc00;
+    border-color: #ffbc00;
+}
+
+.contraste .btn-acessibilidadeMenu {
+    font-family: WonderRegular;
+}
+
+.contraste .header__navigation-link:hover,
+.contraste .acessibilidade.active .header__navigation-link--acessibilidade:hover {
+    text-shadow: none;
+}
+
+.btn-acessibilidadeMenu.active {
+    border-color: transparent;
+}
+
+.contraste .navigation__logo {
+    display: none;
+}
+
+.contraste .navigation__logo--contraste {
+    display: block;
+}
+
+
+/*Fim Acessibilidade*/
 
 @keyframes MenuClosed {
     0% {

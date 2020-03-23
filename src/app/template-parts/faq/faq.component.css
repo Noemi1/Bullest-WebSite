@@ -42,9 +42,7 @@
     letter-spacing: 1px;
     font-family: WonderThin;
     color: #fff;
-    /* color: #2b2a2a; */
     background-color: #2b2a2a;
-    /* background-color: #f9f9f9; */
 }
 
 :host>>>.faq__duvidas-item .ui-state-active a {
@@ -68,6 +66,30 @@
 :host>>>.ui-accordion-toggle-icon {
     margin-left: 1rem;
 }
+
+
+/* Acessibilidade */
+
+:host>>>.contraste .faq__duvidas-item a {
+    background-color: #fce300;
+    color: #000;
+    font-family: WonderMedium;
+}
+
+:host>>>.contraste .faq__duvidas-item .ui-state-active a {
+    background-color: #000;
+    color: #fce300;
+}
+
+:host>>>.contraste .ui-accordion .ui-accordion-content {
+    background-color: #fce300;
+    color: #000;
+    font-family: WonderBold;
+    font-size: 1.9rem;
+}
+
+
+/* Fim Acessibilidade */
 
 @media (max-width: 600px) {
      :host>>>.faq__duvidas-item a {

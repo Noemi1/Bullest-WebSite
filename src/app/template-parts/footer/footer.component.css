@@ -115,6 +115,56 @@ span.icon-span.email {
     font-family: WonderThin;
 }
 
+
+/* Acessibilidade  */
+
+.contraste.footer {
+    background-color: #000;
+}
+
+.contraste .endereco {
+    color: #fce300;
+    font-family: WonderMedium;
+}
+
+.contraste .footer__navigation h3 {
+    color: #fce300;
+    font-size: 2.2rem;
+}
+
+.contraste .footer__navigation-link {
+    color: #fce300;
+    font-family: WonderBold;
+    font-size: 1.7rem;
+}
+
+.contraste .footer__navigation-link:hover {
+    background-color: #fce300;
+    color: #000;
+    text-shadow: none;
+}
+
+.contraste .icon-span.telefone,
+.contraste .icon-span.whatsapp,
+.contraste .icon-span.email {
+    color: #fce300;
+    background-color: #000;
+    border: 2px #fce300 solid;
+}
+
+.contraste .footer__info-contato a {
+    color: #fce300;
+    font-size: 1.8rem;
+}
+
+.contraste .copiright {
+    color: #fce300;
+    font-size: 1.7rem;
+}
+
+
+/* Fim Acessibilidade  */
+
 @media (max-width: 600px) {
     .footer__inner {
         flex-flow: column wrap;

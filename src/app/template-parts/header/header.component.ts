@@ -1,62 +1,100 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
+import { of, from, fromEvent } from 'rxjs';
+import { ContrasteService } from 'src/app/services/contraste.service';
+import { MenuAcessibilidadeService } from 'src/app/services/menu-acessibilidade.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
-  classeActive = false;
-  headerFixo = false;
-  menuAcessibilidadeOpen = false;
-  contrasteAtivo = false;
-  
-  constructor() { }
+    headerFixo = false;
+    menuAcessibilidadeOpen: boolean;
+    menuMobileOpen = false;
+    contrasteAtivo: boolean;
 
-  ngOnInit() {
-    this.alterarHeader();
-  }
-  toggleMenu(): boolean {
-    this.classeActive = !this.classeActive;
-    return this.classeActive;
-  }
+    constructor(
+        private contrasteService: ContrasteService,
+        private menuService: MenuAcessibilidadeService,
+    ) { };
 
-  alterarHeader() {
-    $(window).on('scroll', () => {
-      if ($(window).scrollTop() > 70) {
-        this.headerFixo = true;
-      } else {
-        this.headerFixo = false;
-      }
-      return this.headerFixo;
-    });
-  }
-  scrollToSection(section: string) {
-    if ($(section).offset() !== undefined) {
-      const header = $('.header').hasClass('fixed') ? 70 : 140;
-      $('html, body').animate({
-        scrollTop: $(section).offset().top - header
-      }, '300');
-    }
-  }
-  abrirMenuAcessibilidade() {
-    this.menuAcessibilidadeOpen = !this.menuAcessibilidadeOpen;
-    return this.menuAcessibilidadeOpen;
-  }
-  aumentarFonte() {
+    ngOnInit() {
+        this.alterarHeader();
+        this.getContraste(); 
+        this.getMenuAcessibilidadeStatus();
+    };
 
-  }
-  diminuirFonte() {}
 
-    
+    // Abre/Fecha o menu de acessibilidade
+    toggleMenuAcessibilidade() {
+        this.menuService.setMenuStatus(!this.menuAcessibilidadeOpen);
+    };
 
-  contrasteToggle() {
-    this.contrasteAtivo = !this.contrasteAtivo;
-    $('body').toggleClass('contraste');
-    return this.contrasteAtivo;
-  }
+    // Recupera o estado do menu de Acessibilidade
+    getMenuAcessibilidadeStatus() {
+        this.menuService.getMenuStatus().subscribe((value) => {
+            this.menuAcessibilidadeOpen = value;
+            return this.menuAcessibilidadeOpen;
+        });
+    };
+
+    // Altera o tamanho e a posicao do header
+    alterarHeader() {
+        $(window).on('scroll', () => {
+            if ($(window).scrollTop() > 70) {
+                this.headerFixo = true;
+            } else {
+                this.headerFixo = false;
+            }
+            return this.headerFixo;
+        });
+    };
+
+    // Scroll em ancoras da pagina 
+    scrollToSection(section: string) {
+        if ($(section).offset() !== undefined) {
+            const header = $('.header').hasClass('fixed') ? 70 : 140;
+            $('html, body').animate({
+                scrollTop: $(section).offset().top - header
+            }, '300');
+        }
+    };
+
+    // Aumenta a fonte do texto de todo o site 
+    aumentarFonte() { };
+
+    // Diminui a fonte do texto de todo o site 
+    diminuirFonte() { };
+
+    // Altera estado da tela para visão em contraste 
+    contrasteToggle() {
+        $('body').toggleClass('contraste');
+        this.contrasteService.setContraste(!this.contrasteAtivo);
+    };
+
+    // Acessa status da tela retornando se esta ou nao em contraste
+    getContraste() {
+        this.contrasteService.getContraste().subscribe((value) => {
+            this.contrasteAtivo = value;
+            if (this.contrasteAtivo) {
+                $('body').addClass('contraste');
+            } else {
+                $('body').removeClass('contraste');
+            }
+            return this.contrasteAtivo;
+        })
+    };
+
+    // Abre/ Fecha menu mobile e consequentemente, menu de atividades
+    toggleMenuMobile() {
+        this.menuMobileOpen = !this.menuMobileOpen;
+        this.menuService.setMenuStatus(false);
+        return this.menuMobileOpen;
+        
+    };
 
 }

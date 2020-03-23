@@ -1,16 +1,16 @@
-<header class="header" [class.fixed]="this.headerFixo" [class.relative]="!this.headerFixo">
+<header class="header" [class.fixed]="this.headerFixo" [class.contraste]="this.contrasteAtivo">
     <div class="wrapper">
-        <nav class="header__navigation" [class.active]="this.classeActive">
+        <nav class="header__navigation">
             <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
                 <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
             </div>
-            <div class="header--mobile">
-                <div class="navigation__logo" style="background-image: url(../../../../assets/img/logo-bullest.png);">
-                    <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
-                </div>
-                <button class="header__menuMobile" (click)="toggleMenu()" [class.active]="this.classeActive"></button>
+            <div class="navigation__logo navigation__logo--contraste" style="background-image: url(../../../../assets/img/logo-bullest-contrast.png);">
+                <a (click)="scrollToSection('#banner__home')" class="logo-link"></a>
             </div>
-            <div class="navigation__links" [class.menuOpen]="this.classeActive" [class.active]="this.menuAcessibilidadeOpen">
+            <div class="header--mobile">
+                <button class="header__menuMobile" (click)="toggleMenuMobile()" [class.menuMobileOpen]="this.menuMobileOpen"></button>
+            </div>
+            <div class="navigation__links" [class.menuMobileOpen]="this.menuMobileOpen" [class.active]="this.menuAcessibilidadeOpen">
                 <a (click)="scrollToSection('#sobreNos')" class="header__navigation-link">Sobre Nós</a>
                 <a (click)="scrollToSection('#servicos')" class="header__navigation-link">Serviços</a>
                 <a (click)="scrollToSection('#cases')" class="header__navigation-link">Cases</a>
@@ -18,7 +18,7 @@
                 <a (click)="scrollToSection('#contato')" class="header__navigation-link">Contato</a>
 
                 <div class="acessibilidade" [class.active]="this.menuAcessibilidadeOpen" title="acessibilidade">
-                    <a (click)="abrirMenuAcessibilidade()" class="header__navigation-link header__navigation-link--acessibilidade">
+                    <a (click)="toggleMenuAcessibilidade()" class="header__navigation-link header__navigation-link--acessibilidade">
 
                         <span class="acessibilidade-icon">
                             Acessibilidade

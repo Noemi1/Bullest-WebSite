@@ -77,7 +77,7 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>);
   ],
   providers: [
     { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG, } ,
-    Animacoes
+    Animacoes,
   ],
   bootstrap: [ AppComponent,  ]
 })

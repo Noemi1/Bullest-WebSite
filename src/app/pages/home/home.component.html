@@ -1,6 +1,7 @@
-<section class="home__banner" id="banner__home" [class.full]="this.bannerFull">
+<section class="home__banner" id="banner__home" [class.full]="this.bannerFull" [class.contraste]="this.contrasteAtivo">
     <div class="banner__imagem">
-        <img src="../../../../../assets/img/logo-bullest-banner.png" alt="" srcset="">
+        <img src="../../../../../assets/img/logo-bullest-banner.png" alt="Logo Bullest" class="logo-banner" [hidden]="this.contrasteAtivo">
+        <img src="../../../../../assets/img/logo-bullest-banner-contrast.png" alt="Logo Bullest em Contraste" class="logo-banner" [hidden]="!this.contrasteAtivo">
         <div class="banner__frases">
             <div class="banner__frases-inner" *ngFor="let frase of this.frases">
                 <p> {{ frase.Frase }} </p>

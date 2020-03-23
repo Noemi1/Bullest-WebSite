@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContrasteService } from 'src/app/services/contraste.service';
 
 @Component({
   selector: 'app-sobre-nos',
@@ -11,10 +12,22 @@ export class SobreNosComponent implements OnInit {
   hoje: Date = new Date();
   idadeBullest: number;
 
-  constructor() { }
+  contrasteAtivo: boolean;
+
+  constructor(
+    private contrasteService: ContrasteService,
+  ) { }
 
   ngOnInit(): void {
     this.idadeBullest = this.hoje.getFullYear() - this.inicioBullest;
+    this.getContraste();
+  }
+
+  getContraste() {
+    this.contrasteService.getContraste().subscribe((value) => {
+      this.contrasteAtivo = value;
+      return this.contrasteAtivo;
+    })
   }
 
 }

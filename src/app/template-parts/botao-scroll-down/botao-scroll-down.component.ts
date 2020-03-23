@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
+import { ContrasteService } from 'src/app/services/contraste.service';
 
 @Component({
   selector: 'app-botao-scroll-down',
@@ -9,9 +10,14 @@ import * as $ from 'jquery';
 })
 export class BotaoScrollDownComponent implements OnInit {
 
-  constructor() { }
+  contrasteAtivo: boolean;
+
+  constructor(
+    private contrasteService: ContrasteService,
+  ) { }
 
   ngOnInit() {
+    this.getContraste();
   }
   scrollDown() {
     const header = $('.header').hasClass('fixed') ? 70 : 140;
@@ -19,6 +25,12 @@ export class BotaoScrollDownComponent implements OnInit {
     $('html, body').animate({
       scrollTop: $('.home__banner').next().offset().top - header
     }, '400');
+  }
+  getContraste() {
+    this.contrasteService.getContraste().subscribe((value) => {
+      this.contrasteAtivo = value;
+      return this.contrasteAtivo;
+    })
   }
 
 }

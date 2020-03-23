@@ -1,22 +1,22 @@
-<section class="sobre-nos" id="sobreNos">
-  <div class="wrapper">
-    <div class="sobre-nos__inner">
-      <div class="sobre-nos__title">
-        <h3 class="section-title">Sobre Nós</h3>
-      </div>
-      <div class="sobre-nos__conteudo">
-        <p>A BulleST é uma empresa com {{ this.idadeBullest }} anos de mercado, especializada no
-          desenvolvimento de softwares customizados. Nossas soluções são projetadas para otimizar
-          processos, alavancando equipes de trabalho e multiplicando resultados.</p>
+<section class="sobre-nos" id="sobreNos" [class.contraste]="this.contrasteAtivo">
+    <div class="wrapper">
+        <div *ngIf="this.contrasteAtivo">
+            <div class="circle" *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10]"></div>
+        </div>
 
-        <p>Nossa metodologia não admite soluções genéricas. Com a BulleST o
-          software estará sempre a serviço da empresa, evidenciando a promoção de alta
-          produtividade, controle e gestão qualificada do negócio. </p>
-      </div>
-      <div class="sobre-nos__inner-footer">
-        <!-- <i class="fas fa-laptop-code"></i> -->
-        <p>Veja o que a BulleST fará por você: </p>
-      </div>
+        <div class="sobre-nos__inner">
+            <div class="sobre-nos__title">
+                <h3 class="section-title">Sobre Nós</h3>
+            </div>
+            <div class="sobre-nos__conteudo">
+                <p>A BulleST é uma empresa com {{ this.idadeBullest }} anos de mercado, especializada no desenvolvimento de softwares customizados. Nossas soluções são projetadas para otimizar processos, alavancando equipes de trabalho e multiplicando resultados.</p>
+
+                <p>Nossa metodologia não admite soluções genéricas. Com a BulleST o software estará sempre a serviço da empresa, evidenciando a promoção de alta produtividade, controle e gestão qualificada do negócio. </p>
+            </div>
+            <div class="sobre-nos__inner-footer">
+                <!-- <i class="fas fa-laptop-code"></i> -->
+                <p>Veja o que a BulleST fará por você: </p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

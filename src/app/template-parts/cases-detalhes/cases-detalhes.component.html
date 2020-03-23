@@ -1,19 +1,20 @@
-<section class="cases-detalhes">
-  <div class="modal">
-    <div class="modal-bg" (click)="fecharModal()"></div>
-    <div class="modal-inner" [class.modalOpen]="this.modalOpen">
-      <button class="fecharModal" (click)="fecharModal()"><i class="fas fa-times"></i></button>
-      <div class="modal-content">
-        <h3 class="title-modal" *ngIf="this.case.Empresa !== null" >
-          {{ this.case.Empresa }}
-        </h3>
-        <p *ngIf="this.case.Descricao !== null" >
-          {{ this.case.Descricao }}
-        </p>
-        <div class="servico-prestado">
-          {{ this.case.Servico }}
+<section class="cases-detalhes" [class.contraste]="this.contrasteAtivo">
+    <div class="modal">
+        <div class="modal-bg" (click)="fecharModal()"></div>
+        <div class="modal-inner" [class.modalOpen]="this.modalOpen">
+            <button class="fecharModal" (click)="fecharModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <h3 class="title-modal" *ngIf="this.case.Empresa !== null">
+                    {{ this.case.Empresa }}
+                </h3>
+                <p *ngIf="this.case.Descricao !== null">
+                    {{ this.case.Descricao }}
+                </p>
+                <div class="servico-prestado">
+                    {{ this.case.Servico }}
+                </div>
+                <button class="btn-desligarContraste" (click)="toggleContraste()">Desligar Contraste</button>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>

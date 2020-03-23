@@ -1,8 +1,9 @@
-<footer class="footer">
+<footer class="footer" [class.contraste]="this.contrasteAtivo">
     <div class="wrapper">
         <div class="footer__inner">
             <div class="footer__logo">
-                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest.png);"></a>
+                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest.png);" [hidden]="this.contrasteAtivo"></a>
+                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest-contrast.png);" [hidden]="!this.contrasteAtivo"></a>
                 <a href="https://www.google.com/maps/place/Av.+Paulista,+1159+-+Jardim+Paulista,+S%C3%A3o+Paulo+-+SP,+03103-003/@-23.5646644,-46.6558224,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce59c7d3a04d29:0xd7035ad82107a00d!8m2!3d-23.5646644!4d-46.6536337" class="endereco"
                     target="_blank">
                     <span class="icon-span endereco-icon">

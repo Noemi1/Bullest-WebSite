@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContrasteService } from 'src/app/services/contraste.service';
 
 @Component({
   selector: 'app-servicos',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicosComponent implements OnInit {
 
-  constructor() { }
+  contrasteAtivo: boolean;
+
+  constructor(    
+    private contrasteService: ContrasteService,
+
+  ) { }
 
   ngOnInit(): void {
+    this.getContraste();
+  }
+  
+  getContraste() {
+    this.contrasteService.getContraste().subscribe((value) => {
+      this.contrasteAtivo = value;
+      return this.contrasteAtivo;
+    })
   }
 
 }

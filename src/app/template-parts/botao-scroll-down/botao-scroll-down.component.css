@@ -23,6 +23,10 @@
     transform: scale(1.1);
 }
 
+.contraste .btn-scrollDown {
+    color: #fce300;
+}
+
 @keyframes BotaoScrollDown {
     0% {
         transform: translateY(0%);

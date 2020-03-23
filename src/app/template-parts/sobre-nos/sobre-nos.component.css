@@ -4,6 +4,8 @@
 
 .sobre-nos {
     padding: 3rem 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .sobre-nos__conteudo {
@@ -50,6 +52,55 @@
     margin: 2rem 0 5rem;
     color: #c15901;
 }
+
+.sobre-nos .circle {
+    position: absolute;
+}
+
+
+/* Acessibilidade */
+
+.contraste .sobre-nos__conteudo p,
+.contraste .sobre-nos__inner-footer {
+    color: #fce300;
+}
+
+.contraste .sobre-nos__conteudo p {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+.contraste .sobre-nos__conteudo::after {
+    background-color: #fff2cc;
+    width: 3px;
+}
+
+
+/* Opcao 2*/
+
+.contraste.sobre-nos {
+    background-color: #fce300;
+}
+
+.contraste .sobre-nos__title h3.section-title {
+    color: #000!important;
+}
+
+.contraste .sobre-nos__conteudo p {
+    color: #000;
+    font-family: WonderMedium;
+}
+
+.contraste .sobre-nos__inner-footer {
+    color: #000;
+    font-family: WonderBlackItalic;
+}
+
+
+/* Fim Opcao 2*/
+
+
+/* Fim Acessibilidade */
 
 @media (max-width: 600px) {
     .sobre-nos {

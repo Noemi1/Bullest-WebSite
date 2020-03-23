@@ -88,16 +88,17 @@
     text-align: center;
     display: block;
     margin: 0 auto 20px;
-    width: 120px;
+    width: 150px;
 }
 
 .servicos__card-front h4 {
     text-align: center;
-    padding: 2rem 0;
-    font-size: 2rem;
+    padding: 20px;
+    font-size: 2.2rem;
     color: #484848;
     font-family: WonderMedium;
     letter-spacing: 1px;
+    line-height: 26px;
 }
 
 .servicos__card-back {
@@ -134,9 +135,12 @@
 }
 
 .servicos__card-back h4 {
-    padding-bottom: 19px;
+    padding-bottom: 20px;
+    word-break: break-word;
     color: #333132;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
 }
 
 .servicos__card-back p {
@@ -145,10 +149,46 @@
     font-family: WonderMedium;
     line-height: 20px;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: auto;
     cursor: default;
 }
+
+
+/* Acessibilidade */
+
+.contraste .servicos-bg::after {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.89) 10%, rgba(0, 0, 0, 0.98) 95%);
+}
+
+.contraste .servicos__card-front {
+    background-color: #fce300;
+}
+
+.contraste .servicos__card-front h4 {
+    color: #000;
+}
+
+.contraste .servicos__card-front img {
+    filter: contrast(3.7) drop-shadow(6px 4px 6px rgba(255, 255, 255, 1.5)) hue-rotate(116deg) invert(1);
+}
+
+.contraste .servicos__card-back {
+    background-color: #000;
+    border: 2px #fce300 solid;
+}
+
+.contraste .servicos__card-back h4,
+.contraste .servicos__card-back p {
+    color: #fce300;
+}
+
+.contraste .servicos__card-back p {
+    font-family: WonderRegular;
+}
+
+
+/* Fim Acessibilidade */
 
 @media (max-width: 600px) {
     .servicos {
@@ -203,12 +243,25 @@
         box-shadow: none;
         padding: 20px;
     }
+    .servicos__card-back h4 {
+        padding-bottom: 21px;
+        width: 60%;
+    }
     .servicos__card-back p {
         overflow: visible;
         width: 85%;
         margin: 0;
     }
+}
+
+@media (max-width: 350px) {
+    .servicos__card-front img {
+        width: 110px;
+    }
     .servicos__card-back h4 {
-        padding-bottom: 21px;
+        width: 90%;
+    }
+    .servicos__card-back p {
+        width: 100%;
     }
 }
