@@ -1,3 +1,5 @@
+// import Swiper from "swiper";
+
 $(document).ready(() => {
     $('.cases__slick .slick-content').slick({
         infinite: false,
@@ -29,12 +31,47 @@ $(document).ready(() => {
         dots: false,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 1700,
         speed: 2000,
         vertical: true,
         touchMove: false,
         swipe: false,
     });
+    $('.swiper-button-prev').on('click', function() {
+        mySwiper.allowSlidePrev = true;
+        mySwiper.slidePrev();
+    });
 
+    $('.swiper-button-next').on('click', function() {
+        mySwiper.allowSlideNext = true;
+        mySwiper.slideNext();
+    });
+
+    let mySwiper = new Swiper('.blog-slider', {
+        direction: 'vertical',
+        spaceBetween: 30,
+        effect: 'fade',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        autoplay: 3000,
+        keyboard: true,
+        forceToAxis: true,
+        observer: true,
+        observeParents: true,
+        allowSlideNext: true,
+        mousewheel: {
+            invert: false,
+        },
+
+        pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            600: {
+                direction: 'horizontal',
+            }
+        }
+    })
 
 });

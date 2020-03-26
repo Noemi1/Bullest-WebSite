@@ -1,12 +1,12 @@
 .servicos {
-    padding: 0rem 0 0rem;
+    padding: 0px;
     background-color: #fff;
 }
 
 .servicos-bg {
     position: relative;
-    height: 100%;
-    padding: 7rem 0;
+    height: 100vh;
+    padding: 70px 0;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,16 +33,6 @@
     overflow: hidden;
 }
 
-.servicos__card {
-    width: 250px;
-    margin: 0 20px;
-    position: relative;
-    border-radius: 5px;
-    min-height: 310px;
-    transition: 4s;
-    perspective: 2000px;
-}
-
 .servicos__inner {
     width: 100%;
     display: flex;
@@ -57,7 +47,7 @@
 }
 
 .servicos__header h3 {
-    padding: 0 0 2rem;
+    padding: 0 0 20px;
     color: #f5f5f5;
     text-shadow: 2px 2px 7px rgba(0, 0, 0.4);
 }
@@ -67,28 +57,64 @@
     color: #4a4a4a;
 }
 
-.servicos__card-front {
+.servicos__card {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    border-radius: 5px;
+    transition: 4s;
+    perspective: 2000px;
+    margin: 0 40px;
+}
+
+.cards {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 30px 20px;
+    transition: all .8s ease;
     background-color: #f5f5f5;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+}
+
+.servicos__card-front {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px #f3f7fb7d solid;
-    border-radius: 5px;
-    backface-visibility: hidden;
-    transition: all .8s ease;
-    box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.2);
+}
+
+.servicos__card-back {
+    transform: rotateY(-180deg);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .servicos__card-front img {
     text-align: center;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 0;
     width: 150px;
+}
+
+.servicos__card-front img[hidden],
+.servicos__card-front>div[hidden] {
+    display: none;
+}
+
+.servicos__card-front>div {
+    text-align: center;
+    display: block;
+    margin: 0 auto 0;
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .servicos__card-front h4 {
@@ -99,24 +125,6 @@
     font-family: WonderMedium;
     letter-spacing: 1px;
     line-height: 26px;
-}
-
-.servicos__card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(-180deg);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 5;
-    padding: 30px 20px;
-    background-color: #f5f5f5;
-    backface-visibility: hidden;
-    transition: all .8s ease;
-    box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
 }
 
 .servicos__card:hover .servicos__card-front {
@@ -152,6 +160,31 @@
     font-size: 1.6rem;
     margin: auto;
     cursor: default;
+}
+
+.servicos__card-front::after,
+.servicos__card-front::before,
+.servicos__card-back::after,
+.servicos__card-back::before {
+    content: '';
+    position: absolute;
+    border: 3px #ededed solid;
+    width: 104%;
+    height: 103%;
+    border-radius: 5px;
+    transform: translate(0%, 0%);
+}
+
+.servicos__card-front::after,
+.servicos__card-back::after {
+    top: -1px;
+    left: -1px;
+}
+
+.servicos__card-front::before,
+.servicos__card-back::before {
+    bottom: -1px;
+    right: -1px;
 }
 
 
@@ -190,6 +223,69 @@
 
 /* Fim Acessibilidade */
 
+@media (max-width: 800px) {
+    .servicos-bg {
+        padding: 30px;
+        height: auto;
+    }
+    .servicos__header {
+        margin: 0 0 30px;
+    }
+    .servicos__header h3 {
+        padding: 0;
+    }
+    .servicos__inner {
+        flex-flow: column;
+        align-items: center;
+    }
+    .servicos__card {
+        width: 100%;
+        margin: 70px 0 40px;
+        height: auto;
+        min-height: 200px;
+    }
+    .servicos__card-front {
+        padding: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: none;
+        height: 0;
+    }
+    .servicos__card:hover .servicos__card-front {
+        transform: none;
+    }
+    .servicos__card-front img {
+        position: absolute;
+        right: 0;
+        transform: translate(20%, -40%);
+        top: 0%;
+        z-index: 1;
+    }
+    .servicos__card-front h4 {
+        display: none;
+    }
+    .servicos__card-back {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        box-shadow: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 50px 60px 50px 30px;
+    }
+    .servicos__card-back h4 {
+        transform: translateY(-20px);
+        padding: 0;
+    }
+    .servicos__card-front::after,
+    .servicos__card-front::before,
+    .servicos__card-back::after,
+    .servicos__card-back::before {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
     .servicos {
         height: unset;
@@ -209,7 +305,7 @@
     .servicos__card {
         min-height: unset;
         width: 100%;
-        margin: 0 auto 70px;
+        margin: 40px auto 70px;
         background-color: #f5f5f5;
         box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.7);
         position: relative;
@@ -219,17 +315,20 @@
         opacity: 1;
         visibility: visible;
         backface-visibility: visible;
+        z-index: 0;
     }
     .servicos__card-front {
         box-shadow: none;
         height: 0;
         padding: 0;
+        z-index: 0;
     }
     .servicos__card-front img {
         position: absolute;
         transform: translate(20%, -40%);
         right: 0;
         top: 0;
+        z-index: 1;
     }
     .servicos__card-front h4 {
         display: none;
@@ -242,9 +341,13 @@
         backface-visibility: visible;
         box-shadow: none;
         padding: 20px;
+        z-index: 0;
+    }
+    .servicos__card:hover .servicos__card-back {
+        z-index: 0;
     }
     .servicos__card-back h4 {
-        padding-bottom: 21px;
+        padding-top: 10px;
         width: 60%;
     }
     .servicos__card-back p {

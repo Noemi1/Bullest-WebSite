@@ -1,8 +1,6 @@
 <section class="sobre-nos" id="sobreNos" [class.contraste]="this.contrasteAtivo">
     <div class="wrapper">
-        <div *ngIf="this.contrasteAtivo">
-            <div class="circle" *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10]"></div>
-        </div>
+        <div class="elemento-imagem" #element *ngFor="let item of this.linguagensImagens" [style.backgroundImage]="'url('+ item.Imagem +')'"></div>
 
         <div class="sobre-nos__inner">
             <div class="sobre-nos__title">

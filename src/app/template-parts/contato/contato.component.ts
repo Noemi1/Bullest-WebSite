@@ -28,7 +28,6 @@ export class ContatoComponent implements OnInit {
 
     // Formulario de enviar um email
     enviarEmail(form: NgForm) {
-        console.log(form.value)
         this.serviceEmail.postEmail(form.value)
             .subscribe(
                 res => {
@@ -38,7 +37,7 @@ export class ContatoComponent implements OnInit {
                     console.log(err);
                     this.toastr.error(
                         `Poxa, que pena que isso aconteceu!! Você ainda pode entrar em contato
-           conosco pelo whatsapp ou pelo email`,
+                        conosco pelo whatsapp ou pelo email`,
                         `Erro`);
                 });
     };

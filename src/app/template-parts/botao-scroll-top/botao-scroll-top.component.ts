@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
+import { ContrasteService } from 'src/app/services/contraste.service';
 
 @Component({
   selector: 'app-botao-scroll-top',
@@ -10,11 +11,15 @@ import * as $ from 'jquery';
 export class BotaoScrollTopComponent implements OnInit {
 
   showBtnScrollTop = false;
+  contrasteAtivo: boolean;
 
-  constructor() { }
+  constructor(
+    private contrasteService: ContrasteService,
+    ) { }
 
   ngOnInit() {
     this.mostrarBtnScrollTop();
+    this.getContraste();
   }
 
   mostrarBtnScrollTop() {
@@ -31,6 +36,12 @@ export class BotaoScrollTopComponent implements OnInit {
     $('html, body').animate({
       scrollTop: 0
     }, '300');
+  }
+  getContraste() {
+    this.contrasteService.getContraste().subscribe((value) => {
+      this.contrasteAtivo = value;
+      return this.contrasteAtivo;
+    })
   }
 
 }

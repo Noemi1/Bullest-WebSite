@@ -13,7 +13,9 @@
             <div class="navigation__links" [class.menuMobileOpen]="this.menuMobileOpen" [class.active]="this.menuAcessibilidadeOpen">
                 <a (click)="scrollToSection('#sobreNos')" class="header__navigation-link">Sobre Nós</a>
                 <a (click)="scrollToSection('#servicos')" class="header__navigation-link">Serviços</a>
+                <a (click)="scrollToSection('#clientes')" class="header__navigation-link">Clientes</a>
                 <a (click)="scrollToSection('#cases')" class="header__navigation-link">Cases</a>
+                <a (click)="scrollToSection('#feed')" class="header__navigation-link">Feed</a>
                 <a (click)="scrollToSection('#faq')" class="header__navigation-link">FAQ</a>
                 <a (click)="scrollToSection('#contato')" class="header__navigation-link">Contato</a>
 
@@ -29,8 +31,9 @@
                     </a>
                     <div class="acessibilidadeMenu" [class.acessibilidadeMenu--open]="this.menuAcessibilidadeOpen">
                         <div class="acessibilidade-fonte">
-                            <button class="btn-acessibilidadeMenu" title="Aumentar fonte" (click)="aumentarFonte()">A+</button>
-                            <button class="btn-acessibilidadeMenu" title="Diminuir fonte">A-</button>
+                            <button class="btn-acessibilidadeMenu" title="Normalizar" (click)="defaultFonte()">A<i class="fas fa-undo icon-undo"></i></button>
+                            <button class="btn-acessibilidadeMenu" title="Diminuir fonte" (click)="diminuirFonte()" [disabled]="this.diminuirFonteDisabled">A-</button>
+                            <button class="btn-acessibilidadeMenu" title="Aumentar fonte" (click)="aumentarFonte()" [disabled]="this.aumentarFonteDisabled">A+</button>
                         </div>
                         <button class="btn-acessibilidadeMenu" title="Contrastar" (click)="contrasteToggle()" [class.active]="this.contrasteAtivo">
                             <i class="fas fa-adjust"></i> Contraste

@@ -15,7 +15,7 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: calc(100vh - 2rem - 75px);
+    height: calc(100vh - 20px - 75px);
     display: flex;
     justify-content: center;
     position: relative;
@@ -44,7 +44,7 @@
 
 .banner__frases-inner {
     height: 70px;
-    padding: 1rem;
+    padding: 10px;
     line-height: 30px;
     font-size: 2.4rem;
     color: #fff;
@@ -81,30 +81,51 @@
 
 /*Fim Acessibilidade*/
 
-@media (max-width: 600px) {
-    .home__banner {
-        width: 100%;
-        margin: 0;
-        box-shadow: none;
-    }
+@media (max-width: 800px) {
     .banner__imagem {
-        flex-flow: column;
+        align-items: center;
+        flex-flow: wrap;
+        align-content: center;
     }
     .logo-banner {
-        width: 80%;
         position: static;
-        left: unset;
-        top: unset;
-        transform: none;
-        height: auto;
-        background-size: contain;
-        margin: auto;
+        transform: translate(10%, 0%);
     }
     .banner__frases {
         width: 95%;
-        top: 100%;
+        position: static;
+        margin-top: 0;
+        top: unset;
+        transform: translateY(0);
     }
     .banner__frases-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner__imagem,
+    .home__banner {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .banner__frases-inner {
         height: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner__imagem {
+        height: calc(100vh);
+        padding-top: 70px;
+    }
+    .home__banner {
+        width: 100%;
+        margin: 0;
+    }
+    .logo-banner {
+        transform: translate(10px, 0px);
+        width: 80%;
     }
 }

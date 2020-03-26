@@ -75,6 +75,12 @@ body {
 
 .blog-slider__content {
     padding-right: 25px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-around;
 }
 
 .blog-slider__code {
@@ -82,19 +88,23 @@ body {
     margin-bottom: 15px;
     display: block;
     font-weight: 500;
+    font-size: 1.6rem;
+    width: 100%;
 }
 
 .blog-slider__title {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     color: #0d0925;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .blog-slider__text {
     color: #4e4a67;
-    margin-bottom: 30px;
     line-height: 1.5em;
+    font-size: 1.6rem;
+    width: 100%;
 }
 
 :host>>>.blog-slider__button {
@@ -110,7 +120,8 @@ body {
     text-align: center;
     letter-spacing: 1px;
     border: none;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .blog-slider .swiper-container-horizontal>.swiper-pagination-bullets,
@@ -123,7 +134,7 @@ body {
 
 :host>>>.blog-slider__pagination {
     position: absolute;
-    z-index: 21;
+    z-index: 3;
     right: 20px;
     width: 11px;
     text-align: center;
@@ -285,12 +296,31 @@ body {
     font-size: 1.6rem;
 }
 
-button.blog-slider__button {
+.blog-slider__button {
     margin-top: 20px;
 }
 
 
 /* Fim Acessibilidade */
+
+@media (max-width: 800px) {
+    .blog-slider {
+        width: 70%;
+    }
+    .blog-slider__img {
+        width: 200px;
+        height: 200px;
+    }
+    .blog-slider__content {
+        height: 100%;
+    }
+    .blog-slider__content {
+        transform: translateX(-60px);
+        width: 50%;
+        align-content: center;
+        padding-right: 10px;
+    }
+}
 
 @media (max-width: 600px) {
     .feed {
@@ -299,7 +329,7 @@ button.blog-slider__button {
     .blog-slider {
         width: 80%;
         padding: 40px;
-        margin: 2rem auto;
+        margin: 20px auto;
     }
     .blog-slider__item {
         flex-flow: column;
@@ -325,6 +355,7 @@ button.blog-slider__button {
     .blog-slider__content {
         padding: 0;
         transform: translateY(-30%);
+        width: 95%;
     }
     .blog-slider__code {
         text-align: center;
@@ -342,6 +373,7 @@ button.blog-slider__button {
         margin: auto;
         align-self: center;
         display: flex;
+        margin-top: 10px;
     }
      :host>>>.blog-slider__pagination .swiper-pagination-bullet-active {
         height: 11px;
@@ -350,5 +382,11 @@ button.blog-slider__button {
     }
      :host>>>.swiper-button {
         display: flex;
+    }
+}
+
+@media (max-width: 370px) {
+    .blog-slider {
+        height: 460px;
     }
 }

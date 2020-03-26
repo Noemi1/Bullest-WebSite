@@ -11,7 +11,6 @@ constructor(
 ) { }
 
   postEmail(dados) {
-    console.log(dados)
     return this.http.post('./enviar-email.php', dados);
   }
 }

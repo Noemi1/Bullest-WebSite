@@ -1,11 +1,12 @@
 /*Ps: Tudo o que tem :host serve pra sobrescrever o primeng*/
 
 .faq {
-    padding: 5rem 0;
+    padding: 50px 0;
+    background-color: #f3f3f3;
 }
 
 .duvidas__item-resposta {
-    padding: 0 1rem 0;
+    padding: 0 10px 0;
 }
 
 .faq__duvidas {
@@ -17,7 +18,7 @@
     flex-flow: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0;
+    padding: 5px 0;
 }
 
 :host>>>.faq__duvidas-item {
@@ -38,7 +39,7 @@
     align-items: center;
     flex-flow: row-reverse;
     justify-content: space-between;
-    padding: 1.4rem 2rem;
+    padding: 10px 20px;
     letter-spacing: 1px;
     font-family: WonderThin;
     color: #fff;
@@ -64,7 +65,7 @@
 }
 
 :host>>>.ui-accordion-toggle-icon {
-    margin-left: 1rem;
+    margin-left: 10px;
 }
 
 
@@ -96,6 +97,6 @@
         align-items: stretch;
     }
      :host>>>.faq__duvidas-item a span {
-        padding-top: 1rem;
+        padding-top: 10px;
     }
 }

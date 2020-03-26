@@ -1,9 +1,9 @@
 .sobre-nos__title {
-    padding: 2rem;
+    padding: 20px;
 }
 
 .sobre-nos {
-    padding: 3rem 0;
+    padding: 30px 0;
     overflow: hidden;
     position: relative;
 }
@@ -11,7 +11,7 @@
 .sobre-nos__conteudo {
     display: flex;
     width: 80%;
-    margin: 2rem auto;
+    margin: 20px auto;
     justify-content: space-between;
     position: relative;
 }
@@ -29,7 +29,7 @@
 
 .sobre-nos__conteudo p {
     width: 45%;
-    margin: 0 2rem;
+    margin: 0 20px;
 }
 
 .sobre-nos__conteudo p:first-child {
@@ -38,7 +38,7 @@
 
 .sobre-nos__inner-footer {
     width: 80%;
-    margin: 3rem auto;
+    margin: 30px auto;
     font-size: 2.1rem;
     font-family: WonderBlackItalic;
     color: #333132;
@@ -49,12 +49,27 @@
 
 .sobre-nos__inner-footer svg {
     font-size: 9rem;
-    margin: 2rem 0 5rem;
+    margin: 20px 0 50px;
     color: #c15901;
 }
 
 .sobre-nos .circle {
     position: absolute;
+}
+
+.elemento-imagem {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    -webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    transition: linear 10s;
+    z-index: -1;
+    background-size: 50%;
+    opacity: 0.2;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(1) drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
 }
 
 
@@ -101,6 +116,12 @@
 
 
 /* Fim Acessibilidade */
+
+@media (max-width: 800px) {
+    .sobre-nos__conteudo {
+        width: 100%;
+    }
+}
 
 @media (max-width: 600px) {
     .sobre-nos {

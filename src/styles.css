@@ -17,8 +17,12 @@
 }
 
 html {
-    font-size: 62.5%;
     scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+html:not(h3.section-title) {
+    line-height: 62.5%;
 }
 
 body {
@@ -82,7 +86,7 @@ button:active {
 }
 
 .section-title {
-    font-size: 6rem;
+    font-size: calc(60px + .01rem);
     font-family: WonderBold;
     color: #333132;
     text-align: center;

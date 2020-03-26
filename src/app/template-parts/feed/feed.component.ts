@@ -21,33 +21,33 @@ export class FeedComponent implements OnInit, AfterViewInit {
         private animacoes: Animacoes,        
         private contrasteService: ContrasteService,
     ) {
-        this.swiperConfig = {
-            direction: 'vertical',
-            spaceBetween: 30,
-            effect: 'fade',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            autoplay: 3000,
-            keyboard: true,
-            forceToAxis: true,
-            observer: true,
-            observeParents: true,
+        // this.swiperConfig = {
+        //     direction: 'vertical',
+        //     spaceBetween: 30,
+        //     effect: 'fade',
+        //     nextButton: '.swiper-button-next',
+        //     prevButton: '.swiper-button-prev',
+        //     autoplay: 3000,
+        //     keyboard: true,
+        //     forceToAxis: true,
+        //     observer: true, 
+        //     observeParents: true,
 
-            mousewheel: {
-                invert: false,
-            },
+        //     mousewheel: {
+        //         invert: false,
+        //     },
 
-            pagination: {
-                el: '.blog-slider__pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                600: {
-                    direction: 'horizontal',
-                }
-            }
+        //     pagination: {
+        //         el: '.blog-slider__pagination',
+        //         clickable: true,
+        //     },
+        //     breakpoints: {
+        //         600: {
+        //             direction: 'horizontal',
+        //         }
+        //     }
 
-        };
+        // };
     }
 
     ngOnInit(): void {
@@ -75,7 +75,4 @@ export class FeedComponent implements OnInit, AfterViewInit {
             return this.contrasteAtivo;
         })
     };
-
-
-
 }

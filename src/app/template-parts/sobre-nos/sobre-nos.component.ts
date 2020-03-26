@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContrasteService } from 'src/app/services/contraste.service';
+import { linguagens } from './../../shared/linguagens';
 
 @Component({
   selector: 'app-sobre-nos',
@@ -13,6 +14,7 @@ export class SobreNosComponent implements OnInit {
   idadeBullest: number;
 
   contrasteAtivo: boolean;
+  linguagensImagens = linguagens;
 
   constructor(
     private contrasteService: ContrasteService,

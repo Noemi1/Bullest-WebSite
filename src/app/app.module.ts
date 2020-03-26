@@ -26,19 +26,20 @@ import { FeedComponent } from './template-parts/feed/feed.component';
 
 // Layout
 import { AccordionModule } from 'primeng/accordion';
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+// import { SwiperModule } from 'ngx-swiper-wrapper';
+// import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+// import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 
 import { Animacoes } from "./shared/animacoes";
+import { ClientesComponent } from './template-parts/clientes/clientes.component';
 
 
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'vertical',
-  slidesPerView: 'auto'
-};
+// const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+//   direction: 'vertical',
+//   slidesPerView: 'auto'
+// };
 
 export let options: Partial<IConfig> | (() => Partial<IConfig>);
  
@@ -58,6 +59,7 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>);
     SobreNosComponent,
     FaqComponent,
     FeedComponent,
+    ClientesComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -71,12 +73,12 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>);
 
     // Layout
     AccordionModule,
-    SwiperModule,
+    // SwiperModule,
     NgxMaskModule.forRoot(options),
     
   ],
   providers: [
-    { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG, } ,
+    // { provide: SWIPER_CONFIG, useValue: DEFAULT_SWIPER_CONFIG, } ,
     Animacoes,
   ],
   bootstrap: [ AppComponent,  ]

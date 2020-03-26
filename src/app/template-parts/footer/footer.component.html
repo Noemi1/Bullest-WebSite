@@ -2,41 +2,52 @@
     <div class="wrapper">
         <div class="footer__inner">
             <div class="footer__logo">
-                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest.png);" [hidden]="this.contrasteAtivo"></a>
-                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest-contrast.png);" [hidden]="!this.contrasteAtivo"></a>
+                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest.png);" [class.hidden]="this.contrasteAtivo"></a>
+                <a [routerLink]="" class="footer__logo-link" style="background-image: url(../../../../assets/img/logo-bullest-contrast.png);" [class.hidden]="!this.contrasteAtivo"></a>
                 <a href="https://www.google.com/maps/place/Av.+Paulista,+1159+-+Jardim+Paulista,+S%C3%A3o+Paulo+-+SP,+03103-003/@-23.5646644,-46.6558224,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce59c7d3a04d29:0xd7035ad82107a00d!8m2!3d-23.5646644!4d-46.6536337" class="endereco"
                     target="_blank">
                     <span class="icon-span endereco-icon">
-            <i class="fas fa-map-marked-alt"></i>
-          </span> Av. Paulista, 1159 - Bela Vista, São Paulo - SP - 02808000</a>
+                        <i class="fas fa-map-marked-alt"></i>
+                    </span> Av. Paulista, 1159 - Bela Vista, São Paulo - SP - 02808000</a>
             </div>
             <div class="footer-navigationInfo">
                 <nav class="footer__navigation">
                     <h3>Menu</h3>
-                    <a [routerLink]="" class="footer__navigation-link">Serviços</a>
-                    <a [routerLink]="" class="footer__navigation-link">Cases</a>
-                    <a [routerLink]="" class="footer__navigation-link">Sobre Nós</a>
-                    <a [routerLink]="" class="footer__navigation-link">Contato</a>
+                    <a (click)="scrollToSection('#sobreNos')" class="footer__navigation-link">Sobre Nós</a>
+                    <a (click)="scrollToSection('#servicos')" class="footer__navigation-link">Serviços</a>
+                    <a (click)="scrollToSection('#clientes')" class="footer__navigation-link">Clientes</a>
+                    <a (click)="scrollToSection('#cases')" class="footer__navigation-link">Cases</a>
+                    <a (click)="scrollToSection('#feed')" class="footer__navigation-link">Feed</a>
+                    <a (click)="scrollToSection('#faq')" class="footer__navigation-link">FAQ</a>
+                    <a (click)="scrollToSection('#contato')" class="footer__navigation-link">Contato</a>
                 </nav>
                 <div class="footer__info">
                     <div class="footer__info-contato">
                         <p>
                             <span class="icon-span telefone">
-                <i class="fas fa-phone telefone"></i>
-              </span>
-                            <a href="tel:5511953463376">Telefone: +55 (11) 9 5346-3376</a>
+                                <i class="fas fa-phone telefone"></i>
+                            </span>
+                            <a href="tel:551143239967">Telefone: +55 (11) 4323-9967
+                            </a>
                         </p>
                         <p>
-                            <span class="icon-span whatsapp">
-                <i class="fab fa-whatsapp whatsapp"></i>
-              </span>
-                            <a href="https://wa.me/5511953463376" target="_blank">Whatsapp: (11) 9 5346-3376</a>
+                            <span class="icon-span telefone">
+                                <i class="fas fa-phone telefone"></i>
+                            </span>
+                            <a href="tel:551143239965">Telefone: +55 (11) 4323-9965
+                            </a>
                         </p>
+                        <!-- <p>
+                            <span class="icon-span whatsapp">
+                                <i class="fab fa-whatsapp whatsapp"></i>
+                            </span>
+                            <a href="https://wa.me/5511942038265" target="_blank">Whatsapp: (11) 9 5346-3376</a>
+                        </p> -->
                         <p>
                             <span class="icon-span email">
-                <i class="fas fa-envelope"></i>
-              </span>
-                            <a href="mailto: calmeida.no@gmail.com">calmeida.no@gmail.com</a>
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <a href="mailto: contato@bullest.com.br">contato@bullest.com.br</a>
                         </p>
                     </div>
                 </div>

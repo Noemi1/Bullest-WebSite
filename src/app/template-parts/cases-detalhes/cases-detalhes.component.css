@@ -31,7 +31,7 @@
     width: 90%;
     max-width: 600px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 20px;
     z-index: 1;
     background-color: #fff;
     transition: 1s;
@@ -75,6 +75,7 @@
 .title-modal {
     font-size: 3rem;
     padding: 20px 0 10px;
+    text-align: center;
 }
 
 .title-modal~p {

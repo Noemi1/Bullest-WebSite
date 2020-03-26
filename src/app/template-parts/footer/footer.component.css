@@ -25,8 +25,13 @@
     background-size: contain;
 }
 
+.footer__logo-link.hidden {
+    display: none;
+}
+
 .endereco {
     color: #fff;
+    font-size: 1.6rem;
 }
 
 .endereco:hover {
@@ -40,6 +45,7 @@
 
 .footer__navigation h3 {
     padding: 10px 10px;
+    width: 100%;
     color: #fff;
     font-family: WonderThin, monospace;
     letter-spacing: 1px;
@@ -54,11 +60,20 @@
     font-size: 1.5rem;
     text-shadow: 2px 2px 3px rgb(37, 37, 37);
     text-transform: capitalize;
+    position: relative;
 }
 
 .footer__navigation-link:hover {
     background-color: rgba(0, 0, 0, 0.7);
     font-family: WonderMedium;
+}
+
+.footer__navigation-link::after {
+    content: '-';
+    color: #fff;
+    font-family: WonderBold;
+    margin: 0 auto 0 5px;
+    text-align: center;
 }
 
 .footer__info-contato p {
@@ -73,16 +88,16 @@
 
 .footer__info-contato a {
     color: #fff;
+    font-size: 1.6rem;
 }
 
 .icon-span {
-    margin: 0 10px 0 0;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 8px;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
 }
 
 .icon-span.whatsapp {
@@ -103,6 +118,9 @@ span.icon-span.email {
 
 .footer__navigation {
     margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    max-width: 200px;
 }
 
 .copiright {
@@ -176,7 +194,7 @@ span.icon-span.email {
         align-items: center;
     }
     .footer__logo-link {
-        height: 7rem;
+        height: 70px;
         width: 150px;
     }
     .endereco {

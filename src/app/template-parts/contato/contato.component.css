@@ -16,7 +16,7 @@
     text-align: left;
 }
 
-.contato__faleConosco> {
+.contato__faleConosco>p {
     font-family: WonderRegularItalic;
     font-size: 1.8rem;
 }
@@ -209,7 +209,7 @@ textarea.ng-valid.ng-touched:focus {
 
 /* Fim Acessibilidade */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .contato {
         flex-flow: column;
         padding: 20px;

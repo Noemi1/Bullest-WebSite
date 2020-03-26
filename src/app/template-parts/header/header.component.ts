@@ -4,6 +4,8 @@ import * as $ from 'jquery';
 import { of, from, fromEvent } from 'rxjs';
 import { ContrasteService } from 'src/app/services/contraste.service';
 import { MenuAcessibilidadeService } from 'src/app/services/menu-acessibilidade.service';
+import { FonteService } from 'src/app/services/fonte.service';
+import { Animacoes } from 'src/app/shared/animacoes';
 
 @Component({
     selector: 'app-header',
@@ -16,16 +18,22 @@ export class HeaderComponent implements OnInit {
     menuAcessibilidadeOpen: boolean;
     menuMobileOpen = false;
     contrasteAtivo: boolean;
+    tamanhoFonte: number;
+    aumentarFonteDisabled = false;
+    diminuirFonteDisabled = false;
 
     constructor(
         private contrasteService: ContrasteService,
         private menuService: MenuAcessibilidadeService,
+        private fonteService: FonteService,
+        private animacoes: Animacoes,
     ) { };
 
     ngOnInit() {
         this.alterarHeader();
-        this.getContraste(); 
+        this.getContraste();
         this.getMenuAcessibilidadeStatus();
+        this.getTamanhoFonte();
     };
 
 
@@ -56,19 +64,47 @@ export class HeaderComponent implements OnInit {
 
     // Scroll em ancoras da pagina 
     scrollToSection(section: string) {
-        if ($(section).offset() !== undefined) {
-            const header = $('.header').hasClass('fixed') ? 70 : 140;
-            $('html, body').animate({
-                scrollTop: $(section).offset().top - header
-            }, '300');
-        }
+        this.animacoes.scrollToSection(section);
     };
 
     // Aumenta a fonte do texto de todo o site 
-    aumentarFonte() { };
+    aumentarFonte() {
+        if (this.tamanhoFonte <= 101.5) {
+            this.fonteService.setFonte(this.tamanhoFonte + 3);
+            this.diminuirFonteDisabled = false;
+            return this.diminuirFonteDisabled;
+        } else {
+            this.aumentarFonteDisabled = true;
+            return this.aumentarFonteDisabled;
+        }
+    };
 
     // Diminui a fonte do texto de todo o site 
-    diminuirFonte() { };
+    diminuirFonte() {
+        if (this.tamanhoFonte >= 38.5) {
+            this.fonteService.setFonte(this.tamanhoFonte - 3);
+            this.aumentarFonteDisabled = false;
+            return this.aumentarFonteDisabled;
+        } else {
+            this.diminuirFonteDisabled = true;
+            return this.diminuirFonteDisabled;
+        }
+    };
+
+    defaultFonte() {
+        this.fonteService.setFonte(62.5);
+        this.aumentarFonteDisabled = false;
+        this.diminuirFonteDisabled = false;
+        return [this.diminuirFonteDisabled, this.aumentarFonteDisabled];
+    }
+
+    getTamanhoFonte() {
+        this.fonteService.getTamanhoFonte().subscribe((valor) => {
+            this.tamanhoFonte = valor;
+            $('html').css('font-size', `${valor}%`);
+            return this.tamanhoFonte;
+        });
+    };
 
     // Altera estado da tela para visão em contraste 
     contrasteToggle() {
@@ -94,7 +130,7 @@ export class HeaderComponent implements OnInit {
         this.menuMobileOpen = !this.menuMobileOpen;
         this.menuService.setMenuStatus(false);
         return this.menuMobileOpen;
-        
+
     };
 
 }

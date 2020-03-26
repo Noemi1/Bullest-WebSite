@@ -9,6 +9,7 @@ import { ContrasteService } from 'src/app/services/contraste.service';
 export class ServicosComponent implements OnInit {
 
   contrasteAtivo: boolean;
+  imagensMobile = false;
 
   constructor(    
     private contrasteService: ContrasteService,
@@ -17,6 +18,9 @@ export class ServicosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getContraste();
+    if ($(window).width() <= 800) {
+      this.imagensMobile = true;
+    }
   }
   
   getContraste() {

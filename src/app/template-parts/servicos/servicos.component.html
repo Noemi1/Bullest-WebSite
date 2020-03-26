@@ -6,32 +6,35 @@
             </header>
             <div class="servicos__inner">
                 <div class="servicos__card">
-                    <div class="servicos__card-front">
-                        <img src="../../../assets/img/card-desktop.png" alt="">
+                    <div class="cards servicos__card-front">
+                        <img src="../../../assets/img/card-desktop.png" alt="" [hidden]="!this.imagensMobile">
+                        <div style="background-image: url(../../../assets/img/card-desktop2.png)" [hidden]="this.imagensMobile"></div>
                         <h4>Aplicações Desktop</h4>
                     </div>
-                    <div class="servicos__card-back">
+                    <div class="cards servicos__card-back">
                         <h4>Aplicações Desktop</h4>
                         <p>Desenvolvimento de softwares para todos os sistemas operacionais, utilizando-se das tecnologias mais adequadas para o atendimento das necessidades de cada cliente.</p>
                     </div>
                 </div>
                 <div class="servicos__card">
-                    <div class="servicos__card-front">
-                        <img src="../../../assets/img/card-web.png" alt="">
+                    <div class="cards servicos__card-front">
+                        <img src="../../../assets/img/card-web.png" alt="" [hidden]="!this.imagensMobile">
+                        <div style="background-image: url(../../../assets/img/card-web2.png)" [hidden]="this.imagensMobile"></div>
                         <h4>Aplicações Web</h4>
                     </div>
-                    <div class="servicos__card-back">
+                    <div class="cards servicos__card-back">
                         <h4>Aplicações Web</h4>
                         <p>A alta performance, disponibilidade e escalabilidade das nossas aplicações Web comunicam, integram e vendem produtos e serviços de forma ágil e eficaz.</p>
                     </div>
                 </div>
                 <!-- static -->
                 <div class="servicos__card">
-                    <div class="servicos__card-front">
-                        <img src="../../../assets/img/card-mobile.png" alt="">
+                    <div class="cards servicos__card-front">
+                        <img src="../../../assets/img/card-mobile.png" alt="" [hidden]="!this.imagensMobile">
+                        <div style="background-image: url(../../../assets/img/card-mobile2.png)" [hidden]="this.imagensMobile"></div>
                         <h4>Aplicações Mobile</h4>
                     </div>
-                    <div class="servicos__card-back">
+                    <div class="cards servicos__card-back">
                         <h4>Aplicações Mobile</h4>
                         <p>À frente de um mercado com crescente utilização de smartphones, a equipe da BulleST é especializada em desenvolvimento nativo para Android, IOS e Windows Phone.</p>
                     </div>

@@ -21,7 +21,6 @@ export class BotaoScrollDownComponent implements OnInit {
   }
   scrollDown() {
     const header = $('.header').hasClass('fixed') ? 70 : 140;
-    console.log(header);
     $('html, body').animate({
       scrollTop: $('.home__banner').next().offset().top - header
     }, '400');
