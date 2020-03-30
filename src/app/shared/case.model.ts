@@ -3,5 +3,6 @@ export class CaseModel {
   Imagem: string;
   Empresa: string;
   Descricao: string;
+  Depoimento: string;
   Servico: string;
 }

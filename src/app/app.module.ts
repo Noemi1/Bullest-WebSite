@@ -34,6 +34,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 import { Animacoes } from "./shared/animacoes";
 import { ClientesComponent } from './template-parts/clientes/clientes.component';
+import { DepoimentosComponent } from './template-parts/depoimentos/depoimentos.component';
 
 
 // const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -60,6 +61,7 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>);
     FaqComponent,
     FeedComponent,
     ClientesComponent,
+    DepoimentosComponent,
   ],
   imports: [
     AppRoutingModule,

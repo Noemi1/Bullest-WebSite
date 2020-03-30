@@ -5,6 +5,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/santander.jpeg',
     Empresa: 'Banco Santander',
     Descricao: 'Compliance e Monitoramentos',
+    Depoimento: '',
     Servico: `O Banco Santander Brasil S.A. é a subsidiária do banco espanhol Santander.
     A BulleST já desenvolveu mais de 60 sistemas de controle e monitoramento para
     as mais diversas áreas da empresa. Entre elas destacam-se Compliance,
@@ -17,6 +18,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/bid.png',
     Empresa: 'BID',
     Descricao: 'Banco de Estilos',
+    Depoimento: '',
     Servico: `O Banco Interamericano de desenvolvimento é a principal fonte de financiamento multilateral
     da América Latina. A BulleST desenvolveu o software Manual de Estilos, que promoveu a
     otimização de internacionalização de contratos e campanhas publicitárias, através de dicionário
@@ -26,6 +28,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/governosp.png',
     Empresa: 'Governo de São Paulo',
     Descricao: 'Banco Central da Cultura',
+    Depoimento: '',
     Servico: `A BulleST desenvolveu para a Secretaria da Cultura do Governo do Estado de São Paulo uma solução
     Web para cadastro, contratação e repositório de eventos culturais e artistas. O projeto denominado
     Banco Central de Cultura transformou significativamente a forma de gerenciamento de artistas e
@@ -35,6 +38,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/staff.png',
     Empresa: 'STAFF',
     Descricao: 'Gestão de ISS',
+    Depoimento: '',
     Servico: `A Staff é uma empresa especializada em regulamentação fiscal e cadastral perante órgãos
     públicos e autarquias em todo o território nacional. Entre as soluções desenvolvidas pela
     BulleST, destaca-se a ferramenta de Gestão de ISS, que permite o controle, registro e atualização
@@ -44,6 +48,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/citibank.jpg',
     Empresa: 'Citibank',
     Descricao: 'Pesquisa PLD automatizada',
+    Depoimento: '',
     Servico: `O Citibank é a divisão de consumo da multinacional de serviços financeiros Citigroup. A BulleST
     atuou na área de Prevenção a Lavagem de Dinheiro, com o desenvolvimento de ferramenta que
     automatiza a investigação de clientes em ferramentas de buscas de informações e notícias relacionadas.`
@@ -52,6 +57,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/mmd2.png',
     Empresa: 'MMD2',
     Descricao: 'Aplicativos de gestão de RH',
+    Depoimento: '',
     Servico: `A MMD2 é uma empresa especializada em Soluções nas áreas de recursos humanos, tanto no âmbito
     privado quanto público. A BulleST desenvolveu aplicativos para gestão de demandas de seus clientes,
     entre elas controle de afastamentos de funcionários, controle de férias e controle de timesheet.`
@@ -60,6 +66,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/cavcidiomas.jpg',
     Empresa: 'CAVC Idiomas',
     Descricao: 'Sistema Corporativo',
+    Depoimento: '',
     Servico: `A rede CAVC idiomas é uma rede de escolas para especialização em línguas estrangeiras,
     entre elas inglês, alemão, espanhol, francês e italiano. Através de um sistema corporativo,
     foi possível a otimização de seus processos comerciais e administrativos com desenvolvimento
@@ -69,6 +76,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/santanderS3.jpg',
     Empresa: 'Santander Securities Services',
     Descricao: 'Controles de Compliance',
+    Depoimento: '',
     Servico: `Frutos de uma parceria global no exterior entre o Banco Santander S.A. e um grupo liderado
     pelo Warburg Pincus, a Santander Securities Services presta serviços de custódia qualificada
     para o mercado. A BulleST foi a grande responsável pelo estabelecimento de controles de
@@ -79,6 +87,7 @@ export const cases: CaseModel[] = [
     Imagem: '../../../../../assets/img/fastshop.png',
     Empresa: 'Fast Shop',
     Descricao: 'Solução para gerenciamento DIRF',
+    Depoimento: '',
     Servico: `A Fast Shop é uma rede de lojas brasileira de comercialização de eletrodomésticos e
     eletroeletrônicos de luxo. Fundada em 1986, a empresa possui 96 lojas em 7 estados
     brasileiros. A BulleST foi parceira para desenvolvimento de uma solução para

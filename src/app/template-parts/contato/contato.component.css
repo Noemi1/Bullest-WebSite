@@ -225,6 +225,9 @@ textarea.ng-valid.ng-touched:focus {
 }
 
 @media (max-width: 400px) {
+    .contato {
+        padding: 0;
+    }
     .contato__faleConosco h3 {
         font-size: 3rem;
     }

@@ -47,3 +47,8 @@
     font-family: WonderMedium;
     src: url(../fonts/WonderUnitSans-Medium.woff)
 }
+
+@font-face {
+    font-family: WonderMediumItalic;
+    src: url(../fonts/WonderUnitSans-MediumItalic.woff)
+}

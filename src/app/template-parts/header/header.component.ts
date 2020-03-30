@@ -6,6 +6,8 @@ import { ContrasteService } from 'src/app/services/contraste.service';
 import { MenuAcessibilidadeService } from 'src/app/services/menu-acessibilidade.service';
 import { FonteService } from 'src/app/services/fonte.service';
 import { Animacoes } from 'src/app/shared/animacoes';
+import { Router } from '@angular/router';
+import { AssisteUrlService } from 'src/app/services/assiste-url.service';
 
 @Component({
     selector: 'app-header',
@@ -21,19 +23,25 @@ export class HeaderComponent implements OnInit {
     tamanhoFonte: number;
     aumentarFonteDisabled = false;
     diminuirFonteDisabled = false;
+    esconderMenu = false;
+    urlAtual: string;
 
     constructor(
         private contrasteService: ContrasteService,
         private menuService: MenuAcessibilidadeService,
         private fonteService: FonteService,
         private animacoes: Animacoes,
-    ) { };
+        private urlService: AssisteUrlService,
+    ) { 
+    };
 
     ngOnInit() {
         this.alterarHeader();
         this.getContraste();
         this.getMenuAcessibilidadeStatus();
         this.getTamanhoFonte();
+        this.getUrl();
+        this.getMenuState();
     };
 
 
@@ -132,5 +140,21 @@ export class HeaderComponent implements OnInit {
         return this.menuMobileOpen;
 
     };
+
+    getUrl(){
+        this.urlService.getUrl().subscribe(url => {
+            console.log(url);
+            this.urlAtual = url;
+            return this.urlAtual;
+        })
+    }
+    getMenuState() {
+        this.urlService.getMenuState().subscribe(menu => {
+            this.esconderMenu = menu;
+            console.log(this.esconderMenu)
+            return this.esconderMenu;
+        })
+        return this.esconderMenu;
+    }
 
 }

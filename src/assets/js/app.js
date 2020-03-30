@@ -1,12 +1,35 @@
-// import Swiper from "swiper";
-
 $(document).ready(() => {
-    $('.cases__slick .slick-content').slick({
+    /*
+        $('.cases__slick .slick-content').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: $('.cases__slick .slick-prev'),
+            nextArrow: $('.cases__slick .slick-next'),
+            dots: true,
+            speed: 500,
+            useCSS: true,
+            accessibility: true,
+            adaptiveHeight: false,
+            appendDots: '.slick__footer',
+            responsive: [{
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }],
+            initialSlide: 1,
+            centerMode: true,
+            centerPadding: 0
+        });
+    */
+    $('.depoimentos__slick .slick-content').slick({
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: $('.cases__slick .slick-prev'),
-        nextArrow: $('.cases__slick .slick-next'),
+        prevArrow: $('.depoimentos__slick .slick-prev'),
+        nextArrow: $('.depoimentos__slick .slick-next'),
         dots: true,
         speed: 500,
         useCSS: true,

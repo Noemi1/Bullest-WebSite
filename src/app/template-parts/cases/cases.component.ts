@@ -26,12 +26,11 @@ export class CasesComponent implements OnInit, AfterViewInit {
     
   ) { }
 
-  ngOnInit(): void {   
+  ngOnInit(): void {  
+    this.getContraste();    
   }
   ngAfterViewInit(): void {
     this.animacoes.bubbles(); 
-    this.getContraste();   
-    
   }
   verMais(conteudo: CaseModel) {
     localStorage.setItem('conteudo', JSON.stringify(conteudo))

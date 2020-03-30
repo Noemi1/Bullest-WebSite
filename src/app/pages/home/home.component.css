@@ -9,9 +9,7 @@
 
 .banner__imagem {
     box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    /* background-image: linear-gradient(to right bottom, rgba(10, 16, 21, 0.74) 10%, rgba(1, 14, 25, 0.92) 95%), url(../../../assets/img/city9.jpg); */
-    background-image: linear-gradient(to right bottom, rgba(22, 22, 23, 0.74) 10%, rgb(0, 0, 0) 95%), url(../../../assets/img/city9.jpg);
-    /* background-image: linear-gradient(to right bottom, rgba(22, 22, 23, 0.74) 10%, rgb(0, 0, 0) 95%), url(../../../assets/img/paulista.jpg); */
+    background-image: linear-gradient(to right bottom, rgba(22, 22, 23, 0.74) 10%, rgb(0, 0, 0) 95%), url(./../../../assets/img/servicos/city9.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -51,14 +49,6 @@
     text-align: center;
     letter-spacing: 1px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
-    /* font-family: WonderRegular;
-    font-family: WonderBold;
-    font-family: WonderExtraBold;
-    font-family: WonderBlack;
-    font-family: WonderRegularItalic;
-    font-family: WonderBoldItalic;
-    font-family: WonderBlackItalic;
-    font-family: WonderMedium; */
     font-family: WonderThinItalic;
 }
 
@@ -75,7 +65,7 @@
 }
 
 .contraste .banner__imagem {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.92) 10%, rgba(0, 0, 0, 0.94) 65%), url(../../../assets/img/city9.jpg);
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.92) 10%, rgba(0, 0, 0, 0.94) 65%), url(./../../../assets/img/servicos/city9.jpg);
 }
 
 

@@ -5,6 +5,8 @@ export class Animacoes {
         let top = (Math.random() * (100 - 0) + 0);
         let left = (Math.random() * (150 - (-50)) + (-50));
 
+
+
         for (let x = 1; x <= $('.elemento-imagem').length; x++) {
             $('.elemento-imagem:nth-child(' + x + ')');
             $('.elemento-imagem:nth-child(' + x + ')').css({

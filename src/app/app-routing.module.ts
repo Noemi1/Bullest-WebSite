@@ -10,7 +10,8 @@ const routes: Routes = [
     { path: 'cases/:Id', component: CasesDetalhesComponent },
   ] },
 
-  { path: '**', component: NotFoundComponent },
+  { path: '**', redirectTo: 'not-found' },
+  { path: 'not-found', component: NotFoundComponent}
 ];
 
 @NgModule({

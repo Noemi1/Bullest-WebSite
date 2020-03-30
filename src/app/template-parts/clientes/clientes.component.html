@@ -1,24 +1,22 @@
-<section class="clientes" id="clientes">
+<section class="clientes" id="clientes" [class.contraste]="this.contrasteAtivo">
     <div class="wrapper">
         <div class="clientes__inner">
             <h3 class="section-title">Clientes</h3>
             <p>A <strong> Bullest </strong> transforma clientes em parceiros de negócios, transformando e otimizandoos processos através de padrões de excelência aplicados pelos seus especialistas
             </p>
             <p>Conheça nossos principais clientes: </p>
-
-            <div class="clientes__content" [class.active]="this.cartaAberta">
-                <!-- <div class="abertura-carta-borda" [class.active]="this.cartaAberta" (click)="abrirCarta()">
-                    <span class="adesivo-carta" [class.active]="this.cartaAberta" (click)="abrirCarta()"></span>
-                    <div class="abertura-carta-inner"></div>
-                </div> 
-                <div class="lados-carta"></div>
-                <div class="bottom-carta"></div>-->
-                <!-- <div class="clientes-items" [class.active]="this.cartaAberta"> -->
-                <div class="clientes__content-item" *ngFor="let cliente of this.clientes">
+            <button class="ver-clientes" [class.verClientesOpen]="this.verClientesOpen" (click)="verClientes()">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="clientes__content" *ngIf="!this.contrasteAtivo" [class.active]="this.cartaAberta" [class.verClientesOpen]="this.verClientesOpen">
+                <div class="clientes__content-item {{ cliente.Classe }}" *ngFor="let cliente of this.clientes">
                     <img src="{{ cliente.Logo }}" alt="Logo da empresa {{ cliente.Empresa }}">
                 </div>
-
-                <!-- </div> -->
+            </div>
+            <div class="clientes__content" *ngIf="this.contrasteAtivo" [class.active]="this.cartaAberta" [class.verClientesOpen]="this.verClientesOpen">
+                <div class="clientes__content-item {{ clienteContraste.Classe }} cliente__content-item--contraste" *ngFor="let clienteContraste of this.clientesContraste">
+                    <img src="{{ clienteContraste.Logo }}" alt="Logo da empresa {{ clienteContraste.Empresa }}">
+                </div>
             </div>
         </div>
     </div>

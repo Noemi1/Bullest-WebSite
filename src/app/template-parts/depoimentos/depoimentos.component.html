@@ -1,0 +1,33 @@
+<section class="depoimentos" id="depoimentos" [class.contraste]="this.contrasteAtivo">
+    <div class="wrapper">
+        <div class="depoimentos__inner">
+            <h3 class="section-title">Conheça Nosso Trabalho</h3>
+            <div class="depoimentos__slick">
+                <button class="slick-arrow slick-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slick-arrow slick-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slick-content">
+                    <div class="depoimentos__slick-item" *ngFor="let depoimentos of this.depoimentos">
+                        <div class="logo-img" [style.backgroundImage]="'url('+ depoimentos.Imagem +')'"></div>
+                        <div class="logo-title">
+                            <!-- <h3>
+                                {{ depoimentos.Empresa }}
+                            </h3> -->
+
+                            <blockquote>
+                                <p>" {{ depoimentos.Depoimento }} "</p>
+                                -
+                                <h3> {{ depoimentos.Cargo }}</h3>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick__footer"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>

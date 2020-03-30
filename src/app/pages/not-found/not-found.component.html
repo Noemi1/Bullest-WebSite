@@ -1,1 +1,14 @@
-<p>not-found works!</p>
+<section class="notfound">
+    <div class="star" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10]">
+        <i class="fas fa-star-of-life"></i>
+    </div>
+    <div class="wrapper">
+        <div class="notfound__inner">
+            <h2>404</h2>
+            <p>Página não encontrada</p>
+            <a [routerLink]="['../']" class="back-home">
+                <i class="fas fa-undo-alt"></i> Voltar
+            </a>
+        </div>
+    </div>
+</section>
