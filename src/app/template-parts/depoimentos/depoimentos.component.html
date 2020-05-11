@@ -13,10 +13,6 @@
                     <div class="depoimentos__slick-item" *ngFor="let depoimentos of this.depoimentos">
                         <div class="logo-img" [style.backgroundImage]="'url('+ depoimentos.Imagem +')'"></div>
                         <div class="logo-title">
-                            <!-- <h3>
-                                {{ depoimentos.Empresa }}
-                            </h3> -->
-
                             <blockquote>
                                 <p>" {{ depoimentos.Depoimento }} "</p>
                                 -
@@ -30,4 +26,5 @@
         </div>
     </div>
 </section>
+<div class="renderScript-slick-depoimentos"></div>
 <router-outlet></router-outlet>

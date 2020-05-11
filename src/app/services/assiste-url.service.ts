@@ -18,8 +18,10 @@ export class AssisteUrlService {
   
   setUrl(valor: string): void {
     this.url.next(valor);
-    if (valor === '/not-found') {
+    if (valor == '/not-found') {
       this.hiddeMenu(true);
+    } else {
+      this.escondeMenu.next(true);
     }
   }
   getUrl(): Observable<string> {

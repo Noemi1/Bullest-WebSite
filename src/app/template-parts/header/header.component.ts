@@ -143,7 +143,6 @@ export class HeaderComponent implements OnInit {
 
     getUrl(){
         this.urlService.getUrl().subscribe(url => {
-            console.log(url);
             this.urlAtual = url;
             return this.urlAtual;
         })
@@ -151,7 +150,6 @@ export class HeaderComponent implements OnInit {
     getMenuState() {
         this.urlService.getMenuState().subscribe(menu => {
             this.esconderMenu = menu;
-            console.log(this.esconderMenu)
             return this.esconderMenu;
         })
         return this.esconderMenu;

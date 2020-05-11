@@ -3,6 +3,7 @@ import * as $ from 'jquery'
 import { MenuAcessibilidadeService } from './services/menu-acessibilidade.service';
 
 import { linguagens } from './shared/linguagens';
+import { Animacoes } from './shared/animacoes';
 
 @Component({
     selector: 'app-root',
@@ -16,10 +17,15 @@ export class AppComponent implements OnInit {
     linguagensImagens = linguagens;
 
     constructor(
-        private menuService: MenuAcessibilidadeService
+        private menuService: MenuAcessibilidadeService,
+        private bolhasAnimacao: Animacoes
     ) { }
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log('init')
+        setTimeout(() => {  this.bolhasAnimacao.bubbles() }, 50)
+        setInterval(() => { this.bolhasAnimacao.bubbles() }, 6500)
+    }
 
     fecharMenuAcessibilidade() {
         this.menuService.setMenuStatus(false)
