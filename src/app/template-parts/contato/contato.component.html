@@ -3,31 +3,31 @@
         <h3 class="section-title">Fale Conosco</h3>
         <p>Você sonha, nós realizamos</p>
         <!-- action="../../services/enviar-email.php" -->
-        <form method="POST" class="contato__faleConosco-form" #form="ngForm" action="./../../services/enviar-email.php">
+        <form class="contato__faleConosco-form" #form="ngForm" novalidate="false" (submit)="enviarEmail(form)">
             <p>
-                <label for="nome">Nome: <span class="campo-obrigatorio">*</span></label>
-                <input type="text" name="nome" id="nome" placeholder="Ex: Angela Maria da Silva" required title="Nome..." class="contato__campo-input" #nome="ngModel" ngModel>
+                <label for="Nome">Nome: <span class="campo-obrigatorio">*</span></label>
+                <input type="text" name="Nome" id="Nome" placeholder="Ex: Angela Maria da Silva" required title="Nome..." class="contato__campo-input" #Nome="ngModel" ngModel>
             </p>
             <p>
-                <label for="email">Email: <span class="campo-obrigatorio">*</span></label>
-                <input type="email" [email]="true" name="email" id="telefone" placeholder="abcdef@exemplo.com" required title="Email..." class="contato__campo-input" #email="ngModel" ngModel>
+                <label for="Email">E-mail: <span class="campo-obrigatorio">*</span></label>
+                <input type="email" [email]="true" name="Email" id="Email" placeholder="abcdef@exemplo.com" required title="E-mail..." class="contato__campo-input" #Email="ngModel" ngModel>
             </p>
             <p>
-                <label for="telefone">Telefone: <span class="campo-obrigatorio">*</span></label>
-                <input type="text" name="telefone" id="telefone" mask="(00) 0.0000-0000" placeholder="Ex: (11) 95346-3376" required title="Telefone..." class="contato__campo-input" #telefone="ngModel" ngModel>
+                <label for="Telefone">Telefone: <span class="campo-obrigatorio">*</span></label>
+                <input type="text" name="Telefone" id="Telefone" mask="(00) 0.0000-0000" placeholder="Ex: (11) 95346-3376" required title="Telefone..." class="contato__campo-input" #Telefone="ngModel" ngModel>
                 <!-- (keyup)="verificaTelefone(telefone)" -->
             </p>
             <p>
-                <label for="assunto">Assunto: </label>
-                <input name="assunto" id="assunto" placeholder="Assunto..." title="Assunto..." class="contato__campo-input" #assunto="ngModel" ngModel>
+                <label for="Assunto">Assunto: </label>
+                <input name="Assunto" id="Assunto" placeholder="Assunto..." title="Assunto..." class="contato__campo-input" #Assunto="ngModel" ngModel>
             </p>
             <p>
-                <label for="mensagem">Mensagem: <span class="campo-obrigatorio">*</span></label>
-                <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem aqui..." required title="Mensagem..." class="contato__campo-input contato__campo-input--textarea" #mensagem="ngModel" ngModel></textarea>
+                <label for="Mensagem">Mensagem: <span class="campo-obrigatorio">*</span></label>
+                <textarea name="Mensagem" id="Mensagem" placeholder="Sua mensagem aqui..." required title="Mensagem..." class="contato__campo-input contato__campo-input--textarea" #Mensagem="ngModel" ngModel></textarea>
             </p>
             <div class="contato__faleConosco--footer">
                 <span *ngIf="form.invalid && form.touched">Existem um ou mais campos obrigatórios !!</span>
-                <button type="submit" class="btn-enviarMensagem" [class.disabled]="form.invalid" (click)="enviarEmail(form)" title="Enviar Mensaegm">Enviar</button>
+                <button type="submit" class="btn-enviarMensagem" [class.disabled]="form.invalid" [disabled]="form.invalid" title="Enviar Mensagem">Enviar</button>
             </div>
         </form>
     </div>

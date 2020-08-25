@@ -5,6 +5,7 @@ import { EnviarEmailService } from './../../services/enviar-email.service';
 
 import { ToastrService } from 'ngx-toastr';
 import { ContrasteService } from 'src/app/services/contraste.service';
+import { Email } from 'src/app/shared/email';
 
 @Component({
     selector: 'app-contato',
@@ -16,6 +17,8 @@ export class ContatoComponent implements OnInit {
     telefoneMask: string;
     contrasteAtivo: boolean;
 
+    mensagem: Email;
+
     constructor(
         private serviceEmail: EnviarEmailService,
         private toastr: ToastrService,
@@ -24,21 +27,29 @@ export class ContatoComponent implements OnInit {
 
     ngOnInit() {
         this.getContraste();
+        this.mensagem = {
+            Nome: 'oi',
+            Telefone: 'oi',
+            Email: 'oi',
+            Assunto: 'oi',
+            Mensagem: 'oi'
+        }
     };
 
     // Formulario de enviar um email
     enviarEmail(form: NgForm) {
+        console.log(form.value)
         this.serviceEmail.postEmail(form.value)
             .subscribe(
                 res => {
                     console.log(res);
-                    this.toastr.success('Sucesso', 'Cadastrado com Sucesso!!');
+                    this.toastr.success('Obrigada pelo seu contato. Entraremos em contato em breve!!', 'Sucesso');
                 }, err => {
                     console.log(err);
                     this.toastr.error(
-                        `Poxa, que pena que isso aconteceu!! Você ainda pode entrar em contato
-                        conosco pelo whatsapp ou pelo email`,
-                        `Erro`);
+                        `Erro`,
+                        `Que pena que isso aconteceu!! Entre em contato
+                        conosco pelo whatsapp ou pelo email`);
                 });
     };
     // Altera estado da tela para visão em contraste 
