@@ -14,7 +14,7 @@
                 <a (click)="scrollToSection('#sobreNos')" class="header__navigation-link" [hidden]="this.esconderMenu">Sobre Nós</a>
                 <a (click)="scrollToSection('#servicos')" class="header__navigation-link" [hidden]="this.esconderMenu">Serviços</a>
                 <a (click)="scrollToSection('#clientes')" class="header__navigation-link" [hidden]="this.esconderMenu">Clientes</a>
-                <a (click)="scrollToSection('#depoimentos')" class="header__navigation-link" [hidden]="this.esconderMenu">Depoimentos</a>
+                <!-- <a (click)="scrollToSection('#depoimentos')" class="header__navigation-link" [hidden]="this.esconderMenu">Depoimentos</a> -->
                 <!-- <a (click)="scrollToSection('#feed')" class="header__navigation-link" [hidden]="this.esconderMenu">Feed</a> -->
                 <a (click)="scrollToSection('#faq')" class="header__navigation-link" [hidden]="this.esconderMenu">FAQ</a>
                 <a (click)="scrollToSection('#contato')" class="header__navigation-link" [hidden]="this.esconderMenu">Contato</a>
@@ -24,14 +24,14 @@
 
                         <span class="acessibilidade-icon">
                             Acessibilidade
-                            <i class="fas fa-chevron-down" 
-                                [class.rotate]="!this.menuAcessibilidadeOpen">
+                            <i class="fas fa-chevron-down" [class.rotate]="!this.menuAcessibilidadeOpen">
                             </i>
                         </span>
                     </a>
                     <div class="acessibilidadeMenu" [class.acessibilidadeMenu--open]="this.menuAcessibilidadeOpen">
                         <div class="acessibilidade-fonte">
-                            <button class="btn-acessibilidadeMenu" title="Normalizar" (click)="defaultFonte()">A<i class="fas fa-undo icon-undo"></i></button>
+                            <button class="btn-acessibilidadeMenu" title="Normalizar" (click)="defaultFonte()">A<i
+                                    class="fas fa-undo icon-undo"></i></button>
                             <button class="btn-acessibilidadeMenu" title="Diminuir fonte" (click)="diminuirFonte()" [disabled]="this.diminuirFonteDisabled">A-</button>
                             <button class="btn-acessibilidadeMenu" title="Aumentar fonte" (click)="aumentarFonte()" [disabled]="this.aumentarFonteDisabled">A+</button>
                         </div>
