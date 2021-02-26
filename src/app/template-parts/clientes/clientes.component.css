@@ -376,3 +376,37 @@
         width: 100%;
     }
 }
+
+
+/* Sem os clientes santander
+    Te tiver os clientes santander e santander s3 comente esse godigo
+ */
+
+.clientes__content-item.card-12 {
+    width: 60px;
+    bottom: -80%;
+    left: 40%;
+}
+
+.clientes__content-item.card-14 {
+    left: 16%;
+    top: 130%;
+    width: 190px;
+}
+
+.clientes__content-item.card-5 {
+    left: 20%;
+    top: 80%;
+}
+
+.clientes__content-item.card-6 {
+    right: 0%;
+}
+
+.clientes__content-item.card-11 {
+    top: 150%;
+    right: 20%;
+}
+
+
+/* Fim sem os clientes santander */

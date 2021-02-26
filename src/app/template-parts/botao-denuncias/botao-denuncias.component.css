@@ -1,0 +1,18 @@
+.botao-denuncias {
+    position: fixed;
+    left: 5vw;
+    bottom: 20px;
+    padding: 15px 25px;
+    background-color: #ca5d00;
+    color: #fff;
+    border-radius: 24px;
+    font-size: 19px;
+    z-index: 6;
+    transition: .3s;
+}
+
+.botao-denuncias:hover {
+    transition: .3s;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 4px 7px 0px #0000005c;
+}
