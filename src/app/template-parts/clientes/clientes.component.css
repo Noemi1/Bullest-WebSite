@@ -14,6 +14,7 @@
     height: 100%;
     background-color: #235279;
     background-color: #0c2335;
+    background-color: #040405;
     top: 0;
     left: 0;
     clip-path: polygon(0% 0%, 30% 0, 10% 50%, 30% 100%, 0% 100%);
@@ -345,8 +346,11 @@
         display: block;
     }
     .ver-clientes {
-        display: flex;
-        left: 50%;
+      display: flex;
+      left: 50%;
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
     }
     .ver-clientes.verClientesOpen {
         transform: rotate(180deg) translateX(50%);
@@ -373,7 +377,8 @@
     .clientes__content-item.card-15,
     .clientes__content-item.card-16,
     .clientes__content-item.card-17 {
-        width: 100%;
+      width: 30%;
+      margin: 20px 10px;
     }
 }
 

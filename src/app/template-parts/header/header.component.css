@@ -1,22 +1,23 @@
 .header {
-    position: relative;
-    width: 97%;
-    height: 75px;
-    margin: 20px auto 0;
-    z-index: 5;
-    transition: .3s;
-    background-color: #2b2a2a;
-    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.8);
+  position: relative;
+  width: 97%;
+  height: 65px;
+  margin: 20px auto 0;
+  z-index: 5;
+  transition: .3s;
+  background-color: #2b2a2a;
+  box-shadow: 3px 3px 5px 1px rgb(0 0 0 / 29%);
 }
 
+
 .header.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    margin: 0;
-    background-color: #0a0a0af0;
-    box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  background-color: #0a0a0a;
+  box-shadow: 0 4px 11px 1px rgb(0 0 0 / 39%);
 }
 
 .header>.wrapper {
@@ -24,19 +25,19 @@
 }
 
 .header__navigation {
-    height: 100%;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 .navigation__logo {
-    background-size: contain;
-    width: 8rem;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
+  background-size: contain;
+  width: 7rem;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 .logo-link {
@@ -47,31 +48,33 @@
 }
 
 .navigation__links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
 }
 
 .header__navigation-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
-    color: #fff;
-    font-size: 1.7rem;
-    font-family: WonderMedium;
-    text-shadow: 2px 2px 3px rgb(37, 37, 37);
-    text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 1.7rem;
+  font-family: WonderMedium;
+  text-shadow: 2px 2px 3px rgb(37 37 37);
+  text-transform: capitalize;
 }
 
 .header__navigation-link:active {
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: inset -1px -1px 6px 2px rgba(0, 0, 0, 0.5)
+  background-color: rgb(41 41 41 / 77%);
+  box-shadow: inset -1px -1px 6px 2px rgba(0, 0, 0, 0.5)
 }
 
+.header__navigation-link.active,
 .header__navigation-link:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    font-family: WonderMedium;
+  background-color: rgb(41 41 41 / 77%);
+  font-family: WonderMedium;
 }
 
 .acessibilidade {
@@ -88,7 +91,7 @@
 }
 
 .header__navigation-link--acessibilidade:hover {
-    background-color: #1a1919;
+    background-color: #292929c4;
 }
 
 .acessibilidade-icon svg {
@@ -157,12 +160,12 @@
 /* Header Mobile */
 
 .header--mobile {
-    display: none;
-    height: 75px;
-    z-index: 5;
-    transition: .3s;
-    align-items: center;
-    justify-content: center;
+  display: none;
+  height: 100%;
+  z-index: 5;
+  transition: .3s;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__navigation.active .navigation__links.menuMobileOpen {
@@ -170,7 +173,9 @@
 }
 
 .header.fixed .navigation__links.menuMobileOpen {
-    top: 60px;
+  top: 60px;
+  transform: translateY(0%);
+  z-index: 0;
 }
 
 .header__menuMobile {
@@ -200,9 +205,24 @@
     .header {
         margin: 17px auto 0;
     }
+    .header .wrapper {
+      width: 100%;
+  }
+  .header.fixed .header__navigation--inner {
+    background: #121211;
+}
     .header--mobile {
         display: flex;
     }
+    .header__navigation--inner {
+      background: #121111;
+      width: 100%;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+  }
     .relative .header--mobile {
         width: 100%;
         margin: 0;
@@ -218,46 +238,39 @@
         height: 60px;
     }
     .navigation__links {
-        position: absolute;
-        top: 75px;
-        right: 0;
-        width: calc(250px + 3rem);
-        height: 0;
-        flex-flow: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: #2b2a2a;
-        transition: 1s;
-        z-index: 1;
-    }
+      position: absolute;
+      top: 55px;
+      right: 0;
+      transform: translateX(100%);
+      width: calc(250px + 3rem);
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-color: #2b2a2a;
+      transition: 0.5s;
+      z-index: 1;
+      background: #141212;
+  }
     .acessibilidade {
         width: 100%;
     }
     .navigation__links.menuMobileOpen {
-        height: auto;
+      transform: translateX(0);
+      top: 55px;
     }
     .header__navigation-link {
         width: 100%;
         height: auto;
         justify-content: flex-end;
-        padding: 20px 20px 20px 0;
+        padding: 15px 20px 15px 0;
         color: #fff;
         text-shadow: none;
         font-family: WonderMedium;
     }
-    .header__navigation-link {
-        opacity: 0;
-        visibility: hidden;
-    }
-    .navigation__links.menuMobileOpen .header__navigation-link {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 5s;
-    }
     .header__menuMobile {
         position: relative;
         display: block;
-        width: 39px;
+        width: 30px;
         height: 4px;
         margin: auto 0;
         border: none;
@@ -274,21 +287,21 @@
     }
     .header__menuMobile::after,
     .header__menuMobile::before {
-        content: '';
-        position: absolute;
-        width: 39px;
-        height: 4px;
-        background-color: #fff;
-        border-radius: 10px;
-        left: 0;
-        top: 0;
-        transition: .7s;
-    }
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 10px;
+      left: 0;
+      top: 0;
+      transition: .7s;
+  }
     .header__menuMobile::after {
-        top: 10px;
+        top: 8px;
     }
     .header__menuMobile::before {
-        top: -10px;
+        top: -8px;
     }
     .header__menuMobile.menuMobileOpen {
         visibility: hidden;
@@ -300,8 +313,8 @@
         visibility: visible;
         top: 0;
         width: 30px;
-        left: 10px;
-        transition: .7s hidden 0;
+        left: 0;
+        transition: .5s;
     }
     .header__menuMobile.menuMobileOpen::before {
         transform: rotate(45deg);

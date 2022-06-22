@@ -2,13 +2,17 @@
     position: fixed;
     left: 5vw;
     bottom: 20px;
-    padding: 15px 25px;
+    padding: 12px 20px;
     background-color: #ca5d00;
     color: #fff;
-    border-radius: 24px;
-    font-size: 19px;
+    border-radius: 4px;
+    font-size: 16px;
     z-index: 6;
     transition: .3s;
+}
+
+.botao-denuncias span {
+  font-size: 14px;
 }
 
 .botao-denuncias:hover {

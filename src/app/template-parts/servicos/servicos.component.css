@@ -12,7 +12,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url(../../../assets/img/servicos/city9.jpg);
-    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0 5px 12px 0 rgb(0 0 0 / 50%);
 }
 
 .servicos-bg .wrapper {
@@ -49,7 +50,7 @@
 .servicos__header h3 {
     padding: 0 0 20px;
     color: #f5f5f5;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0.4);
+    text-shadow: 2px 2px 7px rgb(0 0 0)
 }
 
 .servicos__header p {
@@ -64,7 +65,7 @@
     border-radius: 5px;
     transition: 4s;
     perspective: 2000px;
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 .cards {
@@ -143,17 +144,14 @@
 }
 
 .servicos__card-back h4 {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     word-break: break-word;
     color: #333132;
-    font-size: 2.5rem;
-    line-height: 30px;
-    letter-spacing: 1px;
+    font-size: 25px;
 }
 
 .servicos__card-back p {
     color: #333132;
-    letter-spacing: 1px;
     font-family: WonderMedium;
     line-height: 20px;
     text-align: left;
@@ -242,7 +240,7 @@
         width: 100%;
         margin: 70px 0 40px;
         height: auto;
-        min-height: 200px;
+        /* min-height: 200px; */
     }
     .servicos__card-front {
         padding: 0;
@@ -260,6 +258,7 @@
         transform: translate(20%, -40%);
         top: 0%;
         z-index: 1;
+        width: 130px;
     }
     .servicos__card-front h4 {
         display: none;
@@ -272,11 +271,7 @@
         box-shadow: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        padding: 50px 60px 50px 30px;
-    }
-    .servicos__card-back h4 {
-        transform: translateY(-20px);
-        padding: 0;
+        padding: 30px 60px 30px 20px;
     }
     .servicos__card-front::after,
     .servicos__card-front::before,
@@ -305,7 +300,7 @@
     .servicos__card {
         min-height: unset;
         width: 100%;
-        margin: 40px auto 70px;
+        margin: 40px auto;
         background-color: #f5f5f5;
         box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.7);
         position: relative;
@@ -347,8 +342,8 @@
         z-index: 0;
     }
     .servicos__card-back h4 {
-        padding-top: 10px;
         width: 60%;
+        font-size: 20px;
     }
     .servicos__card-back p {
         overflow: visible;
@@ -359,10 +354,7 @@
 
 @media (max-width: 350px) {
     .servicos__card-front img {
-        width: 110px;
-    }
-    .servicos__card-back h4 {
-        width: 90%;
+        width: 90px;
     }
     .servicos__card-back p {
         width: 100%;

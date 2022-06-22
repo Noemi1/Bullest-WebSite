@@ -13,6 +13,7 @@
     font-size: 5rem;
     background-color: transparent;
     color: #fbfbfbc4;
+    color: #ffffff;
     transition: 1s;
     animation: linear BotaoScrollDown 2s infinite;
 }
@@ -70,6 +71,5 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        margin-bottom: 10px;
     }
 }

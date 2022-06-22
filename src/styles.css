@@ -22,7 +22,7 @@ html {
 }
 
 html:not(h3.section-title) {
-    line-height: 62.5%;
+    /* line-height: 62.5%; */
 }
 
 body {
@@ -86,11 +86,11 @@ button:active {
 }
 
 .section-title {
-    font-size: calc(60px + .01rem);
+    font-size: calc(50px + .01rem);
     font-family: WonderBold;
     color: #333132;
     text-align: center;
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
 }
 
 .contraste h3.section-title {
